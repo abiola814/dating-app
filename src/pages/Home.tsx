@@ -16,7 +16,7 @@ const Home: React.FC = () => {
           </div>
           <div className='buttons'>
           <div><IonButton routerLink='/login' fill='outline' className='login'>Login</IonButton></div>
-          <div><IonButton routerLink='/register' className='register'>Register</IonButton></div>
+          <div><IonButton  color="#4B164C" routerLink='/register' className='register'>Register</IonButton></div>
           </div>
         </div>
       </IonContent>
