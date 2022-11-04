@@ -1,8 +1,42 @@
-import { IonPage, IonContent, IonHeader,IonInput, IonButton, IonItem, IonList } from "@ionic/react";
+import { IonPage, IonContent,useIonToast, IonHeader,IonInput, IonButton, IonItem, IonList, IonLoading } from "@ionic/react";
 import './register.css';
-import { Link } from "react-router-dom";
+import { Link ,useHistory} from "react-router-dom";
+import { useState } from "react";
+import { createUser } from "../firebaseconfigs";
 
 const Register: React.FC = () => {
+    const [busy,setBusy] = useState<boolean>(false)
+    const [password,setPassword] = useState('');
+    const [email,setEmail] = useState('');
+    const [number,setNumber] = useState('');
+    const [present] = useIonToast();
+    let history = useHistory();
+    
+    async function handleSubmit(){
+        setBusy(true)
+        console.log(email,number,password)
+    await createUser(email,password)
+    .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    history.push('/login')    // ...
+  
+  })
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorMessage)
+     present({
+        message: errorMessage,
+        duration: 1500,
+        position: 'middle'
+      });
+    }
+    )
+
+        setBusy(false)
+    }
     return (
       <IonPage>
         <IonContent className="fit-content">
@@ -14,25 +48,26 @@ const Register: React.FC = () => {
                 <h3 className="reg-h3">Register to your account</h3>
                 <p className="reg-p">Fill the following essential details to getting registered.</p>
             </div>
+            <IonLoading message="processing" duration={0} isOpen={busy}/>
             <IonItem>
                 <form action="" className="form">
                     <div className="inner-input">
                         <label htmlFor="">Email</label>
-                        <input type="text" placeholder="Enter your username or email" className="input-type"/>
+                        <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Enter your username or email" className="input-type"/>
                     </div>
                     <div className="inner-input">
                         <label htmlFor="">Mobile Number</label>
-                        <input type="text" placeholder="Enter your username or email" className="input-type"/>
+                        <input onChange={(e) => setNumber(e.target.value)} type="text" placeholder="Enter your username or email" className="input-type"/>
                     </div>
                     <div className="inner-input">
                         <label htmlFor="">Password</label>
-                        <input type="text" placeholder="Enter Password" className="input-type"/>
+                        <input onChange={(e) => setPassword(e.target.value)} type="text" placeholder="Enter Password" className="input-type"/>
                     </div>
                     <div className="input-check">
                         <p><input type="checkbox" className="check"/><span className="terms">I agree to that FRNDR terms and coditons.</span></p> <a href="" className="learn">Learn more.</a>
                     </div>
                     <div className="inner">
-                        <IonButton color="#4B164C" className="but">Register</IonButton>
+                        <IonButton onClick={handleSubmit} color="#4B164C" className="but">Register</IonButton>
                     </div>
                 </form>
             </IonItem>
