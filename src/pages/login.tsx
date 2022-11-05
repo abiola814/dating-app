@@ -4,13 +4,13 @@ import './login.css';
 const Login: React.FC = () => {
     return (
       <IonPage>
-        <IonContent>
+        <IonContent scroll-y="false">
          <div className="log-main">
             <div className='image'>
                 <img src="assets/image/back.png" alt="main-logo" className='log-img'/>
             </div>
             <div className='letter'>
-                <h3 className="log-h3">Login to your account</h3>
+                <h2 className="log-h2">Login to your account</h2>
                 <p className="log-p">Welcome to FRNDR, enter your details below to continue .</p>
             </div>
             <div className="input">
@@ -36,7 +36,7 @@ const Login: React.FC = () => {
                 <a href="" className="apple"><i className="fa-brands fa-apple logo-icon"></i></a>
             </div>
             <div className="log">
-              <p>Already have an account?</p><span><a href="">Login</a></span>
+              <p>Don’t have an account?</p><span><a href="/register">Register</a></span>
             </div>
          </div>
         </IonContent>

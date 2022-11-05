@@ -5,8 +5,8 @@
     justify-content: start;
 }
 .log-img{
-    margin-top: 33px;
-    margin-bottom: 35px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 .anchor{
     height: 21px;
@@ -31,7 +31,7 @@
     border-radius: 10px;
     background: linear-gradient(91.34deg, #4B164C 4.28%, #730075 102.07%);
 }
-.log-h3{
+.log-h2{
     height: 27px;
     width: 300px;
     left: 37px;
@@ -57,10 +57,10 @@
     line-height: 23px;
     letter-spacing: 0.02em;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .input{
-    height: 340px;
+    height: 300px;
     width: 100%;
 }
 label{
@@ -141,4 +141,7 @@ input::placeholder{
     text-align: left;
     color: #4B164C;
     text-decoration: none;
+}
+.log-main p{
+    margin-top: 20px;
 }

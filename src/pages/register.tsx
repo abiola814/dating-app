@@ -4,13 +4,13 @@ import './register.css';
 const Register: React.FC = () => {
     return (
       <IonPage>
-        <IonContent>
+        <IonContent scroll-y="false">
          <div className="reg-main">
             <div className='image'>
                 <img src="assets/image/back.png" alt="main-logo" className='reg-img'/>
             </div>
             <div className='letter'>
-                <h3 className="reg-h3">Register to your account</h3>
+                <h2 className="reg-h2">Register to your account</h2>
                 <p className="reg-p">Fill the following essential details to getting registered.</p>
             </div>
             <div className="input">
@@ -36,7 +36,7 @@ const Register: React.FC = () => {
                 </form>
             </div>
             <div className="media">
-              <p>Already have an account?</p><span>Login</span>
+              <p>Already have an account?</p><a href="/login">Login</a>
             </div>
          </div>
         </IonContent>
