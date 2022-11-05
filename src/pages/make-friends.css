@@ -1,0 +1,264 @@
+.make-friend{
+    margin-top: 61px;
+}
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    height: 10%;
+    width: 100%;
+    left: 16px;
+    top: 105px;
+    margin-left: 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header img{
+    height: 30px;
+    width: 65px;
+    margin-left: 17px;
+    top: 61px;
+}
+.note{
+    display: flex;
+    margin-right: 50px;
+    margin-bottom: 14px;
+}
+.fa-bell{
+    height: 14px;
+    width: 16px;
+    font-size: 20px;
+    left: 4px;
+    top: 3px;
+}
+.my-plus{
+    position: relative;
+    right: 16px;
+    bottom: 4px;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #7F3E81, #7F3E81),linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 2px solid #7F3E81;
+    border-radius: 50%;
+}
+.names{
+    display: block;
+}
+.note:nth-child(2){
+    height: 8px;
+    width: 8px;
+    font-size: 10px;
+    left: 14px;
+    top: 0px;
+}
+.my-stat{
+    height: 60px;
+    width: 60px;
+}
+.others img{
+    border-radius: 50%;
+    border: 2px solid #7F3E81;
+}
+.plus{
+    position: relative;
+    width: 4.666667461395264px;
+    font-size: 10px;
+    right: 7.5px;
+    bottom: 4px;
+}
+.first-quarter{
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: 93%;
+    background: #F8E7F6;
+    border-radius: 22px;
+    margin: auto;
+    margin-top: 20px;
+}
+.first{
+    height: 36px;
+    width: 45%;
+    left: 4px;
+    top: 4px;
+    border-radius: 18px;
+    background: #FFFFFF;
+    text-align: center;
+}
+.extra{
+    margin: auto;
+    margin-right: 10px;
+}
+.first-love{
+    left: 38px;
+    margin: auto;
+    font-family: Hellix;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+}
+.second{
+    margin-left: 50px;
+    top: 12px;
+    font-family: Hellix;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.picture-detail{
+    /* position: relative; */
+    height: 417px;
+    width: 335px;
+    left: 20px;
+    top: 270px;
+    border-radius: 19px;
+    margin: auto;
+}
+.head-up{
+    position: relative;
+    height: 24px;
+    width: 120px;
+    left: 100px;
+    top: 25px;
+    padding: 4px 16px 4px 16px;
+    background: #9B139D;
+    align-self: center;
+    color: #fff;
+    font-weight: bold;
+}
+.swipe{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 3px solid red;
+    border-radius: 30px;
+    /* z-index: 5; */
+}
+.picture-container{
+    position: relative;
+}
+.picture-detail{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border: 3px solid orange;
+    border-radius: 30px;
+}
+
+.stack1{
+    top: 30px;
+    width: 70%;
+    left: 15%;
+}
+
+.stack2{
+    top: 20px;
+    width: 80%;
+    left: 10%;
+}
+
+.stack3{
+    top: 10px;
+    width: 90%;
+    left: 5%;
+}
+
+.picture-details{
+    position: relative;
+    color: #fff;
+    bottom: 230px;
+    height: 203px;
+    width: 329px;
+    border-radius: 7px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%);
+}
+.sara{
+    height: 29px;
+    width: 150px;
+    left: 53px;
+    top: 528px;
+    font-family: Hellix;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+.stateless, .distance{
+    height: 17px;
+    width: 92px;
+    left: 53px;
+    top: 559px;
+    font-family: Hellix;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.star{
+    height: 51px;
+    width: 51px;
+    left: 65px;
+    top: 602px;
+    background: #FFFFFF96;
+    text-align: center;
+    border-radius: 50%;
+}
+.fa-xmark{
+    height: 14px;
+    width: 14px;
+    left: 84px;
+    font-size: 20px;
+    top: 621px;
+    color: #FFFFFF;
+}
+.fa-heart{
+    height: 26px;
+    width: 31px;
+    left: 172px;
+    font-size: 33px;
+    top: 614px;
+    color: #DD88CF;
+    margin-top: 20px;
+}
+.fa-star{
+    height: 18.999500274658203px;
+    width: 20.26551628112793px;
+    left: 274.8671875px;
+    font-size: 20px;
+    top: 617.00048828125px;
+    color: #FFFFFF;
+}
+.mid{
+    height: 71px;
+    width: 71px;
+    left: 152px;
+    top: 591px;
+    text-align: center;
+    background: #fff;
+    border-radius: 50%;
+}
+.ico{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.isale{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10%;
+    width: 100%;
+    box-shadow: 0px -3px 54px 0px #00000012;
+}
