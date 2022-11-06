@@ -158,3 +158,62 @@ text-align: left;
     padding: 8px 20px;
     border: 1px solid #4B164C33;
 }
+.profile-display{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.profile-display h2{
+    font-family: Hellix;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.profile-display p{
+    font-family: Hellix;
+    font-size: 16px;
+    /* font-weight: 500; */
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.miscellanous{
+    width: 100%;
+}
+.each-miscellanous{
+    display: grid;
+    grid-template-columns: 2fr 9fr;
+    border-bottom: #0000000A 1px solid;
+}
+.icon-down{
+    height: 37px;
+    width: 37px;
+    border-radius: 8px;
+    background: #9B139D;
+    text-align: left;
+    
+}
+
+.crown{background: #9B139D;}
+
+.set{background:#54B7A6;}
+
+.sign{background:#ED4C5C;}
+
+
+.icon-down i{
+    height: 12px;
+    width: 16px;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+.each-miscellanous h2{
+    font-family: Hellix;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}

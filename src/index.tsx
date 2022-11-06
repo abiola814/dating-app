@@ -3,13 +3,20 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'
+import reducer from './redux/reducer';
+import { createStore } from 'redux';
 
+const store = createStore(reducer)
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
+  <Provider store={store}>
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode> 
+  </Provider>
+  
 );
 
 // If you want your app to work offline and load faster, you can change

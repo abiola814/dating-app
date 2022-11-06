@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 .reg-img{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 33px;
+    margin-bottom: 35px;
+    
 }
+
 .reg-main{
     display:flex;
     flex-direction: column;
@@ -71,7 +73,7 @@
     font-size: 16px;
 }
 .media{
-    margin-top: 140px;
+    margin-top: 39px;
     display: flex;
 }
 .media p{

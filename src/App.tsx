@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRouterOutlet, IonSpinner, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Login from './pages/login';
@@ -27,11 +27,16 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { useEffect, useState } from 'react';
+import { getcurentuser } from './firebaseconfigs';
+import Dashboard from './pages/dashboard';
+import { setUserState } from './redux/actions';
+import { useDispatch } from 'react-redux';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
+const Datingrouter: React.FC = () =>{
+  return(
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/" component={ Home }/>
@@ -41,9 +46,38 @@ const App: React.FC = () => (
         <Route exact path="/make-friends" component={ MakeFriend } />
         <Route exact path="/search-friends" component={ SearchFriends } />
         <Route exact path="/profile" component={ Profile } />
+        <Route exact path="/dashboard" component={ Dashboard } />
       </IonRouterOutlet>
     </IonReactRouter>
-  </IonApp>
 );
+}
 
+const App: React.FC = () => {
+  const [busy,setBusy]=useState(true)
+  const dispatch = useDispatch()
+  useEffect(() =>{
+  getcurentuser().then((user: any) => {
+    if (user){
+      //login
+      dispatch(setUserState(user.email))
+      window.history.replaceState({},'','/dashboard')
+    } else{
+        window.history.replaceState({},'','/')
+    }
+    setBusy(false)
+  })
+
+    
+  })
+  return(
+  <IonApp>
+  { busy ? <IonSpinner/> : <Datingrouter/>}
+  {/* <IonReactRouter>
+    <IonRouterOutlet>
+    <Route exact path="/dashboard" component={ dashboard } />
+  </IonRouterOutlet>
+  </IonReactRouter> */}
+  </IonApp>
+)
+  }
 export default App;
