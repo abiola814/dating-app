@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 .reg-img{
+
     margin-top: 33px;
     margin-bottom: 35px;
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .reg-main{
@@ -15,7 +17,7 @@
     align-items: center;
     justify-content: space-around;
 }
-.reg-h3{
+.reg-h2{
     height: 27px;
     width: 300px;
     left: 37px;
@@ -74,6 +76,7 @@
 }
 .media{
     margin-top: 39px;
+    margin-top: 140px;
     display: flex;
 }
 .media p{
@@ -89,7 +92,7 @@
     text-align: right;
     color: #3B3237;
 }
-.media span{
+.media a{
     height: 16px;
     width: 50px;
     left: 254px;

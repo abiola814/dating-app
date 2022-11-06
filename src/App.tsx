@@ -4,6 +4,10 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Login from './pages/login';
 import Register from './pages/register';
+import Verify from './pages/verify';
+import MakeFriend from './pages/make-friends';
+import SearchFriends from './pages/search-friends';
+import Profile from './pages/profile';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -31,14 +35,19 @@ import { useDispatch } from 'react-redux';
 
 setupIonicReact();
 
-const Datingrouter: React.FC = () =>{
+const Datingrouter: React.FC = () => {
   return(
     <IonReactRouter>
+
     <IonRouterOutlet>
-    <Route exact path="/" component={ Home }/>
+    <Route exact path="/ss" component={ Home }/>
     <Route exact path="/login" component={ Login } />
     <Route exact path="/register" component={ Register } />
-    <Route exact path="/dashboard" component={ Dashboard } />
+    <Route  path="/dashboard" component={ Dashboard } />
+    <Route exact path="/verify" component={ Verify } />
+    <Route exact path="/make-friends" component={ MakeFriend } />
+        <Route exact path="/search-friends" component={ SearchFriends } />
+        <Route exact path="/profile" component={ Profile } />
   </IonRouterOutlet>
 </IonReactRouter>
   )
@@ -54,21 +63,22 @@ const App: React.FC = () => {
       dispatch(setUserState(user.email))
       window.history.replaceState({},'','/dashboard')
     } else{
-        window.history.replaceState({},'','/')
+        window.history.replaceState({},'','/dashboard')
     }
     setBusy(false)
   })
+
 
     
   })
   return(
   <IonApp>
   { busy ? <IonSpinner/> : <Datingrouter/>}
-  {/* <IonReactRouter>
+   {/* <IonReactRouter>
     <IonRouterOutlet>
     <Route exact path="/dashboard" component={ dashboard } />
   </IonRouterOutlet>
-  </IonReactRouter> */}
+  </IonReactRouter>  */}
   </IonApp>
 )
   }

@@ -39,13 +39,16 @@ const Register: React.FC = () => {
     }
     return (
       <IonPage>
-        <IonContent className="fit-content">
-         <IonList className="reg-main">
+    
+        
+        <IonContent scroll-y="false">
+         <div className="reg-main">
+
             <div className='image'>
                 <img src="assets/image/back.png" alt="main-logo" className='reg-img'/>
             </div>
             <div className='letter'>
-                <h3 className="reg-h3">Register to your account</h3>
+                <h2 className="reg-h2">Register to your account</h2>
                 <p className="reg-p">Fill the following essential details to getting registered.</p>
             </div>
             <IonLoading message="processing" duration={0} isOpen={busy}/>
@@ -71,11 +74,16 @@ const Register: React.FC = () => {
                     </div>
                 </form>
             </IonItem>
-            <IonItem className="media">
+            <div className="media">
               <p>Already have an account?</p><Link to="/login"><span>Login</span></Link>
-            </IonItem>
-         </IonList>
+            </div>
+        
+
+            </div>
+
+        
         </IonContent>
+
     </IonPage>
     );
   };
