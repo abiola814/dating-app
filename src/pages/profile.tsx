@@ -9,7 +9,7 @@ const Profile: React.FC = () => {
 
     return (
       <IonPage>
-        <IonContent scroll-y="false">
+        <IonContent>
           <div className="profile">
             <div className="header-profile">
               <h2>Profile</h2>
@@ -60,15 +60,15 @@ const Profile: React.FC = () => {
             </div>
             <div className="miscellanous">
               <div className="each-miscellanous">
-                <i className="fa-solid fa-crown"></i>
+                <div className="icon-down crown"><i className="fa-solid fa-crown"></i></div>
                 <h2>FRNDR Premium</h2>
               </div>
               <div className="each-miscellanous">
-                <i className="fa-regular fa-gear"></i>
+                <div className="icon-down set"><i className="fa-regular fa-gear"></i></div>
                 <h2>Settings</h2>
               </div>
               <div className="each-miscellanous">
-                <i className="fa-regular fa-arrow-right-from-bracket"></i>
+                <div className="icon-down sign"><i className="fa-regular fa-arrow-right-from-bracket"></i></div>
                 <h2>Sign Out</h2>
               </div>
             </div>
