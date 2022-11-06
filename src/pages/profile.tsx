@@ -72,13 +72,7 @@ const Profile: React.FC = () => {
                 <h2>Sign Out</h2>
               </div>
             </div>
-            <div className="isale">
-              <div className=""><i className="fa-solid fa-star" style={{color: '#DCD7E1'}}></i></div>
-              <div className=""><i className="fa-solid fa-heart"style={{color: '#DCD7E1'}}></i></div>
-              <div className=""><i className="fa-solid fa-star"style={{color: '#DCD7E1'}}></i></div>
-              <div className=""><i className="fa-thin fa-messages"style={{color: '#DCD7E1'}}></i></div>
-              <div className=""><i className="fa-solid fa-user"style={{color: '#730075'}}></i></div>
-            </div>
+  
           </div>
         </IonContent>
     </IonPage>

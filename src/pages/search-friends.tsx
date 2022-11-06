@@ -61,13 +61,7 @@ const SearchFriends: React.FC = () => {
                         <div className="picture-detail stack3"><img src="assets/image/Rectangle.png" alt=""/></div>
                     </div>
                 </div>
-                <div className="isale">
-                    <div className=""><i className="fa-solid fa-star" style={{color: '#DCD7E1'}}></i></div>
-                    <div className=""><i className="fa-solid fa-heart"style={{color: '#DCD7E1'}}></i></div>
-                    <div className=""><i className="fa-solid fa-star"style={{color: '#DCD7E1'}}></i></div>
-                    <div className=""><i className="fa-thin fa-messages"style={{color: '#DCD7E1'}}></i></div>
-                    <div className=""><i className="fa-solid fa-user"style={{color: '#DCD7E1'}}></i></div>
-                </div>
+            
         </div>
       </IonContent>
   </IonPage>
