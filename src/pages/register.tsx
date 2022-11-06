@@ -71,11 +71,12 @@ const Register: React.FC = () => {
                     </div>
                 </form>
             </IonItem>
-            <IonItem className="media">
+            <div className="media">
               <p>Already have an account?</p><Link to="/login"><span>Login</span></Link>
-            </IonItem>
+            </div>
          </IonList>
         </IonContent>
+
     </IonPage>
     );
   };

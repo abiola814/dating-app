@@ -35,21 +35,22 @@ import { useDispatch } from 'react-redux';
 
 setupIonicReact();
 
-const Datingrouter: React.FC = () =>{
+const Datingrouter: React.FC = () => {
   return(
     <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/" component={ Home }/>
-        <Route exact path="/login" component={ Login } />
-        <Route exact path="/register" component={ Register } />
-        <Route exact path="/verify" component={ Verify } />
-        <Route exact path="/make-friends" component={ MakeFriend } />
+
+    <IonRouterOutlet>
+    <Route exact path="/ss" component={ Home }/>
+    <Route exact path="/login" component={ Login } />
+    <Route exact path="/register" component={ Register } />
+    <Route  path="/dashboard" component={ Dashboard } />
+    <Route exact path="/verify" component={ Verify } />
+    <Route exact path="/make-friends" component={ MakeFriend } />
         <Route exact path="/search-friends" component={ SearchFriends } />
         <Route exact path="/profile" component={ Profile } />
-        <Route exact path="/dashboard" component={ Dashboard } />
-      </IonRouterOutlet>
-    </IonReactRouter>
-);
+  </IonRouterOutlet>
+</IonReactRouter>
+  )
 }
 
 const App: React.FC = () => {
@@ -62,21 +63,19 @@ const App: React.FC = () => {
       dispatch(setUserState(user.email))
       window.history.replaceState({},'','/dashboard')
     } else{
-        window.history.replaceState({},'','/')
+        window.history.replaceState({},'','/dashboard')
     }
     setBusy(false)
   })
-
-    
   })
   return(
   <IonApp>
   { busy ? <IonSpinner/> : <Datingrouter/>}
-  {/* <IonReactRouter>
+   {/* <IonReactRouter>
     <IonRouterOutlet>
     <Route exact path="/dashboard" component={ dashboard } />
   </IonRouterOutlet>
-  </IonReactRouter> */}
+  </IonReactRouter>  */}
   </IonApp>
 )
   }

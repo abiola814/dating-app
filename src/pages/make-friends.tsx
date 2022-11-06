@@ -9,7 +9,7 @@ const MakeFriend: React.FC = () => {
 
     return (
       <IonPage>
-        <IonContent scroll-y="false">
+        <IonContent>
             <div className="make-friend">
                 <div className="header">
                     <img src="assets/image/back2.png"  alt="Main-logo" />
@@ -65,13 +65,7 @@ const MakeFriend: React.FC = () => {
                         <div className="picture-detail stack3"><img src="assets/image/Rectangle.png" alt=""/></div>
                     </div>
                 </div>
-                <div className="isale">
-                    <div className=""><i className="fa-solid fa-star" style={{color: '#DCD7E1'}}></i></div>
-                    <div className=""><i className="fa-solid fa-heart"style={{color: '#DCD7E1'}}></i></div>
-                    <div className=""><i className="fa-solid fa-star"style={{color: '#DCD7E1'}}></i></div>
-                    <div className=""><i className="fa-thin fa-messages"style={{color: '#DCD7E1'}}></i></div>
-                    <div className=""><i className="fa-solid fa-user"style={{color: '#DCD7E1'}}></i></div>
-                </div>
+    
             </div>
         </IonContent>
     </IonPage>
