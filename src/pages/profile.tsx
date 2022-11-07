@@ -18,7 +18,7 @@ const Profile: React.FC = () => {
             <div className="profile-photo">
               <div className="image-photo">
                 <img src="assets/image/Avatar.png" alt="" />
-                <div className="combo"><h4>75% Completed</h4></div>
+                <span className="combo"><h3>75% Completed</h3></span>
               </div>
               <div className="profile-name">
                 <h3>John Doe</h3>
@@ -64,11 +64,11 @@ const Profile: React.FC = () => {
                 <h2>FRNDR Premium</h2>
               </div>
               <div className="each-miscellanous">
-                <div className="icon-down set"><i className="fa-regular fa-gear"></i></div>
+                <div className="icon-down set"><i className="fa-solid fa-gear"></i></div>
                 <h2>Settings</h2>
               </div>
               <div className="each-miscellanous">
-                <div className="icon-down sign"><i className="fa-regular fa-arrow-right-from-bracket"></i></div>
+                <div className="icon-down sign"><i className="fa-solid fa-arrow-right-from-bracket"></i></div>
                 <h2>Sign Out</h2>
               </div>
             </div>
