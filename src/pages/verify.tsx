@@ -1,8 +1,26 @@
-import { IonPage, IonContent, IonHeader, IonButton } from "@ionic/react";
+import { IonPage, IonContent,IonInput, IonHeader,IonBackButton, IonButton } from "@ionic/react";
 import { NONAME } from "dns";
 import './verify.css';
+import { Link ,useHistory} from "react-router-dom";
+import OtpInput from "../components/OtpInput";
+import { useState } from "react";
+import { MuiOtpInput } from 'mui-one-time-password-input'
+import { NumericKeyboard } from 'react-numeric-keyboard';
+
 
 const Verify: React.FC = () => {
+  const [otp, setOtp] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+
+  let history = useHistory();
+  
+  const handleChange = (newValue :any) => {
+    setOtp(newValue)
+    
+  }
+  const handleComplete = (finalValue: any) => {
+    history.push('/favourite')
+  }
     return (
       <IonPage>
         <IonContent scroll-y="false">
@@ -18,45 +36,18 @@ const Verify: React.FC = () => {
             </div>
             <div className="pin">
               <div className="inner-pin">
-              <div className="box"></div>
-              <div className="box"></div>
-              <div className="box"></div>
-              <div className="box"></div>
-              <div className="box"></div>
-              <div className="box"></div>
+              <MuiOtpInput value={otp} onChange={handleChange} length={6} onComplete={handleComplete} />
+              <IonInput inputmode="email"></IonInput>
               </div>
               <p>Enter 4 digit code</p>
             </div>
             <div className="resend">Resend Code (0:30s)</div>
           </div>
-            <div className="keypads">
-              <div className="keys">
-                <div className="num-flex">
-                <div className="nums"><p>1</p></div>
-                <div className="nums"><p>2</p><p className="let">ABC</p></div>
-                <div className="nums"><p>3</p><p className="let">DEF</p></div>
-                </div>
-                <div className="num-flex">
-                <div className="nums"><p>4</p><p className="let">GHI</p></div>
-                <div className="nums"><p>5</p><p className="let">JKL</p></div>
-                <div className="nums"><p>6</p><p className="let">MNO</p></div>
-                </div>
-                <div className="num-flex">
-                <div className="nums"><p>7</p><p className="let">PQRS</p></div>
-                <div className="nums"><p>8</p><p className="let">TUVW</p></div>
-                <div className="nums"><p>9</p><p className="let">XYZ</p></div>
-                </div>
-                <div className="num-flex flex">
-                  <div className=""></div>
-                  <div className="nums" style={{visibility: 'hidden'}}>0</div>
-                  <div className="nums">0</div>
-                  <div className="nums-i"><i className="fa-light fa-delete-left"></i></div>
-                </div>
-              </div>
-            </div>
+
         </div>
         </IonContent>
     </IonPage>
+    
     );
   };
 

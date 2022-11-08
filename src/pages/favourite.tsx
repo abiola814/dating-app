@@ -7,7 +7,7 @@ const Favourite: React.FC = () => {
     <IonPage>
      <IonHeader className="reg-main">
         <img src="assets/image/back.png" alt="main-logo" className='reg-img'/>
-      </IonHeader>
+    </IonHeader>
       <IonContent>
             <h1 className='interesth1'>Pick your interests...</h1>
             <div className="inner-input">

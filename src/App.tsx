@@ -63,9 +63,10 @@ const App: React.FC = () => {
     if (user){
       //login
       dispatch(setUserState(user.email))
-      window.history.replaceState({},'','/login')
+      window.history.replaceState({},'','/dashboard')
     } else{
-        window.history.replaceState({},'','/login')
+        window.history.replaceState({},'','/favourite')
+
     }
     setBusy(false)
   })
