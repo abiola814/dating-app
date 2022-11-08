@@ -64,8 +64,6 @@ const Login: React.FC = () => {
 
     return (
       <IonPage>
-      
-        
         <IonContent scroll-y="false">
          <div className="log-main">
             <div className='image'>
@@ -99,7 +97,7 @@ const Login: React.FC = () => {
                 <a href="" className="apple"><i className="fa-brands fa-apple logo-icon"></i></a>
             </IonItem>
             <div className="log">
-              <p>Dont have an account?</p><span><Link to="/register">Register</Link></span>
+              <p>Already have an account?</p><span><Link to="/register">Register</Link></span>
             </div>
             </div>
         </IonContent>

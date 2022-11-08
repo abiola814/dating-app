@@ -39,11 +39,8 @@ const Register: React.FC = () => {
     }
     return (
       <IonPage>
-    
-        
-        <IonContent scroll-y="false">
-         <div className="reg-main">
-
+        <IonContent className="fit-content" scroll-y="false">
+         <IonList className="reg-main">
             <div className='image'>
                 <img src="assets/image/back.png" alt="main-logo" className='reg-img'/>
             </div>
@@ -77,11 +74,7 @@ const Register: React.FC = () => {
             <div className="media">
               <p>Already have an account?</p><Link to="/login"><span>Login</span></Link>
             </div>
-        
-
-            </div>
-
-        
+         </IonList>
         </IonContent>
 
     </IonPage>

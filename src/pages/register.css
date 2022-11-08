@@ -4,11 +4,8 @@
     box-sizing: border-box;
 }
 .reg-img{
-
     margin-top: 33px;
-    margin-bottom: 35px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;   
 }
 
 .reg-main{
@@ -76,7 +73,6 @@
 }
 .media{
     margin-top: 39px;
-    margin-top: 140px;
     display: flex;
 }
 .media p{

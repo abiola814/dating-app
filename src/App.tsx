@@ -40,13 +40,13 @@ const Datingrouter: React.FC = () => {
   return(
     <IonReactRouter>
 
-    <IonRouterOutlet>
-    <Route exact path="/ss" component={ Home }/>
-    <Route exact path="/login" component={ Login } />
-    <Route exact path="/register" component={ Register } />
-    <Route  path="/dashboard" component={ Dashboard } />
-    <Route exact path="/verify" component={ Verify } />
-    <Route exact path="/make-friends" component={ MakeFriend } />
+      <IonRouterOutlet>
+        <Route exact path="/" component={ Home }/>
+        <Route exact path="/login" component={ Login } />
+        <Route exact path="/register" component={ Register } />
+        <Route  path="/dashboard" component={ Dashboard } />
+        <Route exact path="/verify" component={ Verify } />
+        <Route exact path="/make-friends" component={ MakeFriend } />
         <Route exact path="/search-friends" component={ SearchFriends } />
         <Route exact path="/profile" component={ Profile } />
         <Route exact path="/favourite" component={ Favourite } />
@@ -63,15 +63,12 @@ const App: React.FC = () => {
     if (user){
       //login
       dispatch(setUserState(user.email))
-      window.history.replaceState({},'','/favourite')
+      window.history.replaceState({},'','/login')
     } else{
-        window.history.replaceState({},'','/favourite')
+        window.history.replaceState({},'','/login')
     }
     setBusy(false)
   })
-
-
-    
   })
   return(
   <IonApp>
