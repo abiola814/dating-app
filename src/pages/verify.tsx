@@ -27,7 +27,7 @@ const Verify: React.FC = () => {
         <div className="content">
           <div className="upper">
             <div className="mess">
-                <i className="fa-solid fa-angle-left"></i>
+                <IonBackButton text="" className="fa-solid fa-angle-left" defaultHref="register" />
                 <img src="assets/image/back.png"  className="im-sent" alt="" />
             </div>
             <div className="verify-message">
