@@ -32,6 +32,7 @@ import { getcurentuser } from './firebaseconfigs';
 import Dashboard from './pages/dashboard';
 import { setUserState } from './redux/actions';
 import { useDispatch } from 'react-redux';
+import Favourite from './pages/favourite';
 
 setupIonicReact();
 
@@ -40,7 +41,7 @@ const Datingrouter: React.FC = () => {
     <IonReactRouter>
 
       <IonRouterOutlet>
-        <Route exact path="/ss" component={ Home }/>
+        <Route exact path="/" component={ Home }/>
         <Route exact path="/login" component={ Login } />
         <Route exact path="/register" component={ Register } />
         <Route  path="/dashboard" component={ Dashboard } />
@@ -48,8 +49,9 @@ const Datingrouter: React.FC = () => {
         <Route exact path="/make-friends" component={ MakeFriend } />
         <Route exact path="/search-friends" component={ SearchFriends } />
         <Route exact path="/profile" component={ Profile } />
-      </IonRouterOutlet>
-    </IonReactRouter>
+        <Route exact path="/favourite" component={ Favourite } />
+  </IonRouterOutlet>
+</IonReactRouter>
   )
 }
 
@@ -61,9 +63,10 @@ const App: React.FC = () => {
     if (user){
       //login
       dispatch(setUserState(user.email))
-      window.history.replaceState({},'','/register')
+      window.history.replaceState({},'','/dashboard')
     } else{
         window.history.replaceState({},'','/register')
+
     }
     setBusy(false)
   })
