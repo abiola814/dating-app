@@ -20,7 +20,7 @@ const Message: React.FC = () => {
 	return (
 		<IonPage>
 			<IonHeader>
-				<IonToolbar className="">
+			
 					<aside className="wrapper">
 						<h4 className="h4-margin">Online</h4>
 						<div className="online">
@@ -37,11 +37,11 @@ const Message: React.FC = () => {
 							})}
 						</div>
 					</aside>
-				</IonToolbar>
+					<h4 className="content-wrapper">My chats</h4>
 			</IonHeader>
 			<IonContent>
 				<aside className="content-wrapper">
-					<h4>My chats</h4>
+					
 					<div className="container content">
 						{message_data.map((info, i) => {
 							return (
