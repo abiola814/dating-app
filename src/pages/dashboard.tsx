@@ -1,60 +1,85 @@
-import { IonContent,IonTabBar, IonHeader, IonPage, IonTitle, IonToolbar,IonButton, IonTabs, IonRouterOutlet, IonTabButton, IonIcon } from '@ionic/react';
-import { State } from 'ionicons/dist/types/stencil-public-runtime';
-import { useSelector } from 'react-redux';
-import React from 'react';
-import { Logout } from '../firebaseconfigs';
-import { Redirect, useHistory } from 'react-router';
-import { Route } from 'react-router-dom';
-import SearchFriends from './search-friends';
-import MakeFriend from './make-friends';
-import './dashboard.css';
+import {
+	IonContent,
+	IonTabBar,
+	IonHeader,
+	IonPage,
+	IonTitle,
+	IonToolbar,
+	IonButton,
+	IonTabs,
+	IonRouterOutlet,
+	IonTabButton,
+	IonIcon,
+} from "@ionic/react";
+import { State } from "ionicons/dist/types/stencil-public-runtime";
+import { useSelector } from "react-redux";
+import React from "react";
+import { Logout } from "../firebaseconfigs";
+import { Redirect, useHistory } from "react-router";
+import { Route } from "react-router-dom";
+import SearchFriends from "./search-friends";
+import MakeFriend from "./make-friends";
+import Message from "./Message";
+import "./dashboard.css";
 
-import { heart,person,chatbubbleEllipses,settings,star } from 'ionicons/icons'
-import Profile from './profile';
-
+import {
+	heart,
+	person,
+	chatbubbleEllipses,
+	settings,
+	star,
+} from "ionicons/icons";
+import Profile from "./profile";
+import { MASSAGES_ONLINE } from "../constant";
+import Chat from "./Chat";
 
 const Dashboard: React.FC = () => {
-  // const email = useSelector((state: any) => state.user.email)
-  // let history = useHistory();
+	// const email = useSelector((state: any) => state.user.email)
+	// let history = useHistory();
 
+	// async function logout()
+	// {
+	//   await Logout()
+	//   history.push('/')
+	// }
+	return (
+		<IonTabs>
+			<IonRouterOutlet>
+				<Route path="/dashboard/tab1" component={SearchFriends} />
+				<Route path="/dashboard/tab2" component={MakeFriend} />
+				<Route path="/dashboard/tab3" component={Profile} />
+				<Route
+					path="/dashboard/tab4"
+					render={() => <Message message_data={MASSAGES_ONLINE} />}
+				/>
+				<Route
+					path="/dashboard/tab4/:id"
+					render={() => <Chat message_data={MASSAGES_ONLINE} />}
+				/>
 
-  // async function logout()
-  // {
-  //   await Logout()
-  //   history.push('/')
-  // }
-    return (
-   <IonTabs>
-    <IonRouterOutlet>
-      <Route path="/dashboard/tab1" component={SearchFriends} />
-      <Route path="/dashboard/tab2" component={MakeFriend} />
-      <Route path="/dashboard/tab3" component={Profile} />
-      <Route exact path="/dashboard">
-        <Redirect to="/dashboard/tab1" />
-      </Route>
+				<Route exact path="/dashboard">
+					<Redirect to="/dashboard/tab1" />
+				</Route>
+			</IonRouterOutlet>
 
-    </IonRouterOutlet>
-    
-    <IonTabBar className='IonTabButton' slot="bottom">
-    
-        <IonTabButton   tab="account" href="/dashboard/tab2" >
-        <IonIcon icon={star}  className="IonTabButton" ></IonIcon>
-        </IonTabButton>
-        <IonTabButton    tab="contact" href="/dashboard/tab1">
-          <IonIcon icon={heart} className="IonTabButton" ></IonIcon>
-        </IonTabButton>
-        <IonTabButton     tab="settingsd">
-        <IonIcon icon={star} className="IonTabButton"></IonIcon>
-        </IonTabButton>
-        <IonTabButton  tab="settingscc">
-        <IonIcon icon={chatbubbleEllipses} className="IonTabButton" ></IonIcon>
-        </IonTabButton>
-        <IonTabButton   tab="settingffs"  href="/dashboard/tab3">
-        <IonIcon icon={person} className="IonTabButton"></IonIcon>
-        </IonTabButton>
-      </IonTabBar>
-   </IonTabs>
-    );
-
-    };
-  export default Dashboard;
+			<IonTabBar className="IonTabButton" slot="bottom">
+				<IonTabButton tab="account" href="/dashboard/tab2">
+					<IonIcon icon={star} className="IonTabButton"></IonIcon>
+				</IonTabButton>
+				<IonTabButton tab="contact" href="/dashboard/tab1">
+					<IonIcon icon={heart} className="IonTabButton"></IonIcon>
+				</IonTabButton>
+				<IonTabButton tab="settingsd">
+					<IonIcon icon={star} className="IonTabButton"></IonIcon>
+				</IonTabButton>
+				<IonTabButton tab="message" href="/dashboard/tab4">
+					<IonIcon icon={chatbubbleEllipses} className="IonTabButton"></IonIcon>
+				</IonTabButton>
+				<IonTabButton tab="settingffs" href="/dashboard/tab3">
+					<IonIcon icon={person} className="IonTabButton"></IonIcon>
+				</IonTabButton>
+			</IonTabBar>
+		</IonTabs>
+	);
+};
+export default Dashboard;
