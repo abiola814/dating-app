@@ -15,6 +15,7 @@ const Register: React.FC = () => {
     async function handleSubmit(){
         setBusy(true)
         console.log(email,number,password)
+        history.push('/verify')
     await createUser(email,password)
     .then((userCredential) => {
     // Signed in 
@@ -39,11 +40,8 @@ const Register: React.FC = () => {
     }
     return (
       <IonPage>
-    
-        
-        <IonContent scroll-y="false">
-         <div className="reg-main">
-
+        <IonContent className="fit-content" scroll-y="false">
+         <IonList className="reg-main">
             <div className='image'>
                 <img src="assets/image/back.png" alt="main-logo" className='reg-img'/>
             </div>
@@ -52,17 +50,16 @@ const Register: React.FC = () => {
                 <p className="reg-p">Fill the following essential details to getting registered.</p>
             </div>
             <IonLoading message="processing" duration={0} isOpen={busy}/>
-            <IonItem>
                 <form action="" className="form">
-                    <div className="inner-input">
+                    <div className="inner-reg-input">
                         <label htmlFor="">Email</label>
                         <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Enter your username or email" className="input-type"/>
                     </div>
-                    <div className="inner-input">
+                    <div className="inner-reg-input">
                         <label htmlFor="">Mobile Number</label>
                         <input onChange={(e) => setNumber(e.target.value)} type="text" placeholder="Enter your username or email" className="input-type"/>
                     </div>
-                    <div className="inner-input">
+                    <div className="inner-reg-input">
                         <label htmlFor="">Password</label>
                         <input onChange={(e) => setPassword(e.target.value)} type="text" placeholder="Enter Password" className="input-type"/>
                     </div>
@@ -73,15 +70,10 @@ const Register: React.FC = () => {
                         <IonButton onClick={handleSubmit} color="#4B164C" className="but">Register</IonButton>
                     </div>
                 </form>
-            </IonItem>
             <div className="media">
               <p>Already have an account?</p><Link to="/login"><span>Login</span></Link>
             </div>
-        
-
-            </div>
-
-        
+         </IonList>
         </IonContent>
 
     </IonPage>
