@@ -30,6 +30,8 @@ import {
 	star,
 } from "ionicons/icons";
 import Profile from "./profile";
+import { MASSAGES_ONLINE as message_data } from "../constant";
+import Chat from "./Chat";
 
 const Dashboard: React.FC = () => {
 	// const email = useSelector((state: any) => state.user.email)
@@ -46,7 +48,15 @@ const Dashboard: React.FC = () => {
 				<Route path="/dashboard/tab1" component={SearchFriends} />
 				<Route path="/dashboard/tab2" component={MakeFriend} />
 				<Route path="/dashboard/tab3" component={Profile} />
-				<Route path="/dashboard/tab4" component={Message} />
+				<Route
+					path="/dashboard/tab4"
+					render={(message_data) => <Message message_data={message_data} />}
+				/>
+				<Route
+					path="/dashboard/tab4/:id"
+					render={(message_data) => <Chat message_data={message_data} />}
+				/>
+
 				<Route exact path="/dashboard">
 					<Redirect to="/dashboard/tab1" />
 				</Route>
