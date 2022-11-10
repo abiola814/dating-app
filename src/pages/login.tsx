@@ -71,30 +71,30 @@ const Login: React.FC = () => {
             </div>
             <div className='letter'>
                 <h2 className="log-h2">Login to your account</h2>
-                <p className="log-p">Welcome to FRNDR, enter your details below to continue .</p>
+                <p className="log-p">Welcome to <em className="em">FRNDR</em>, enter your details below to continue .</p>
             </div>
             <div className="input">
             <IonLoading message="processing" duration={0} isOpen={busy}/>
                 <form className="form" >
-                    <div className="inner-input">
-                        <label htmlFor="">Email/ Mobile Number</label>
+                    <div className="innert-input">
+                        <label htmlFor="" className="label">Email/ Mobile Number</label>
                         <input type="text" name='email' placeholder="Enter your username or email" className="input-type" onChange={(e) => setEmail(e.target.value)}/>
                     </div>
-                    <div className="inner-input">
-                        <label htmlFor="">Password</label>
+                    <div className="innert-input">
+                        <label htmlFor="" className="label">Password</label>
                         <input type="text" name='password' placeholder="Enter Password" className="input-type" onChange={(e) => setPassword(e.target.value)}/>
                     </div>
                     <div className="inner">
-                        <a rel="stylesheet" href="" className="anchor">Forgot password?</a>
+                        <Link rel="stylesheet" to="" className="anchor">Forgot password?</Link>
                         <IonButton  onClick={handleSubmit} color="#4B164C" className="but" >login</IonButton>
                     </div>
                 </form>
             </div>
-            <p>OR</p>
+            <p className="ordiv">OR</p>
             <IonItem className="log-media">
-                <a href="" className="google"><i className="fa-brands fa-google logo-icon"></i></a>
-                <a href="" className="facebook"><i className="fa-brands fa-facebook logo-icon"></i></a>
-                <a href="" className="apple"><i className="fa-brands fa-apple logo-icon"></i></a>
+                <Link to="" className="google"><i className="fa-brands fa-google logo-icon"></i></Link>
+                <Link to="" className="facebook"><i className="fa-brands fa-facebook logo-icon"></i></Link>
+                <Link to="" className="apple"><i className="fa-brands fa-apple logo-icon"></i></Link>
             </IonItem>
             <div className="log">
               <p>Already have an account?</p><span><Link to="/register">Register</Link></span>

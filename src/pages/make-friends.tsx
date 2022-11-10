@@ -8,67 +8,91 @@ const MakeFriend: React.FC = () => {
     
 
     return (
-      <IonPage>
+      <IonPage  className="makebody">
+        <script src="https://kit.fontawesome.com/64bee0d46a.js" ></script>
+        <IonHeader>
+        <div className="navline">
+        <img src="assets/image/icons/logo.png" alt=""/>
+        <i className="fa-regular fa-bell"></i>
+    </div>
+        </IonHeader>
         <IonContent>
-            <div className="make-friend">
-                <div className="header">
-                    <img src="assets/image/back2.png"  alt="Main-logo" />
-                    <div className="note">
-                    <i className="fa-regular fa-bell"></i>
-                    <i className="fa-solid fa-plus plus"></i>
-                    </div>
-                </div>
-                <div className="status">
-                    <div className="all">
-                        <div className="my-status">
-                            <img src="assets/image/Avatar.png" className="my-stat others" alt=""/>
-                            <i className="fa-solid fa-plus my-plus"></i>
-                            <span className="names">My Story</span>
-                        </div>
-                    </div>
-                    <div className="others"><img src="assets/image/third.png" alt="" /><span className="names">Selena</span></div>
-                    <div className="others"><img src="assets/image/fourth.png" alt="" /><span className="names">Clara</span></div>
-                    <div className="others"><img src="assets/image/fifth.png" alt="" /><span className="names">Fabian</span></div>
-                    <div className=""><img src="assets/image/sixth.png" alt="" /><span className="names">George</span></div>
-                </div>
-                <div className="first-quarter">
-                    <div className="first"><span className="first-love">Make Friends</span></div>
-                    <div><span className="second">Search Partners</span></div>
-                </div>
+        <div className="avatars">
+        <div className="add-story-avatar">
+            <img src="assets/image/avatar/AvatarMystory.png" alt=""/>
+            <img src="assets/image/avatar/AddStory.png" className="plus-sign" alt=""/>
+        </div>
+        
+        <div className="avatar-profile">
+            <img src="assets/image/avatar/profileselena.png" alt=""/>
+            <p className="avatar-name">Selena</p>
+        </div>
 
-                <div className="picture-container">
-                    <div className="picture-detail">
-                        <div className="details">
-                            <div className="head-up">70% Match</div>
-                            <div className="swipe">
-                                <img src="assets/image/Rectangle.png" alt="" className="imm"/>
-                                {/* <img src="assets/image/Rectangle.png" alt=""/>
-                                <img src="assets/image/Rectangle.png" alt=""/>
-                                <img src="assets/image/Rectangle.png" alt=""/>
-                                <img src="assets/image/Rectangle.png" alt=""/> */}
-                            </div>
-                            <div className="picture-details">
-                                <h2 className="sara">Sara Willaims</h2>
-                                <div className="stateless-distance">
-                                    <span className="stateless">Califonia, USA</span>
-                                    <span className="distance">( 54 km )</span>
-                                </div>
-                                <div className="ico">
-                                    <div className="star"><i className="fa-regular fa-xmark"></i></div>
-                                    <div className="mid"><i className="fa-solid fa-heart"></i></div>
-                                    <div className="star"><i className="fa-solid fa-star"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="picture-detail stack1"><img src="assets/image/Rectangle.png" alt=""/></div>
-                        <div className="picture-detail stack2"><img src="assets/image/Rectangle.png" alt=""/></div>
-                        <div className="picture-detail stack3"><img src="assets/image/Rectangle.png" alt=""/></div>
-                    </div>
-                </div>
-    
+        <div className="avatar-profile">
+            <img src="assets/image/avatar/profileClara.png" alt=""/>
+            <p className="avatar-name">Clara</p>
+        </div>
+        
+                <div className="avatar-profile">
+            <img src="assets/image/avatar/profileselena.png" alt=""/>
+            <p className="avatar-name">Selena</p>
+        </div>
+        
+                <div className="avatar-profile">
+            <img src="assets/image/avatar/profileselena.png" alt=""/>
+            <p className="avatar-name">Selena</p>
+        </div>
+
+        <div className="avatar-profile">
+            <img src="assets/image/avatar/profilefabian.png" alt=""/>
+            <p className="avatar-name">Fabian</p>
+        </div>
+
+        <div className="avatar-profile">
+            <img src="assets/image/avatar/profileGeorge.png" alt=""/>
+            <p className="avatar-name">Ge</p>
+        </div>
+        
+         </div>
+
+    <div className="search-partners">
+        <div className="make-friends">
+            <p>Make Friends</p>
+        </div>
+        <p className="search-p">Search Partners</p>
+    </div>
+
+    <div className="home-picture">
+        <div className="percentage-match">
+            <p>70% Match</p>
+        </div>
+        <img src="assets/image/SaraHome.png" alt="" className="main-picture"/>
+        <img src="assets/image/saraJohns.png" alt="" className="one"/>
+        <img src="assets/image/AmendaGrace.png" alt="" className="two"/>
+        <img src="assets/image/JaneSmith.png" alt="" className="three"/>
+
+        <div className="profile-text">
+            <h4 className="name-title">Sara Johns</h4>
+            <p className="address">Califonia, USA, (54km)</p>
+        </div>
+
+        <div className="profile-icon">
+            <div className="xmark">
+                <i className="fa-solid fa-xmark"></i>
+            </div>
+            <div className="like">
+                <i className="fa-solid fa-heart"></i>
+            </div>
+            <div className="star">
+                <i className="fa-solid fa-star"></i>
+            </div>
+        </div>
+
             </div>
         </IonContent>
+    
     </IonPage>
+
     );
   };
 

@@ -37,7 +37,7 @@ const Verify: React.FC = () => {
             <div className="pin">
               <div className="inner-pin">
               <MuiOtpInput value={otp} onChange={handleChange} length={6} onComplete={handleComplete} />
-              <IonInput inputmode="email"></IonInput>
+              <IonInput inputmode="email" className="box"></IonInput>
               </div>
               <p>Enter 4 digit code</p>
             </div>
