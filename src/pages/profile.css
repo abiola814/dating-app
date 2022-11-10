@@ -107,13 +107,12 @@
 }
 .lorem{
     font-family: Hellix;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 22px;
-    letter-spacing: 1;
+    letter-spacing: 2;
     text-align: left;
     color: #000000;
-    font-weight: lighter;
-    margin-left: 15px;
+    margin: 0 15px;
     margin-bottom: 10px;
 }
 .gender{
@@ -222,4 +221,29 @@ text-align: left;
     line-height: 19px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+@media (max-width: 400px) {
+    .lorem {
+        font-family: Hellix;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 1;
+        text-align: left;
+        color: #000000;
+        margin-left: 15px;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .each-miscellanous h2 {
+        font-family: Hellix;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .profile-display h2 {
+        font-family: Hellix;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+    }
 }
