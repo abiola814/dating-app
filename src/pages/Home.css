@@ -23,14 +23,11 @@
     height: 50px;
     width: 87%;
     margin-left: 30px;
-    top: 662px;
-    border-radius: 15px;
-    height: 50px;
+    border-radius: 10px;
     font-family: Segoe UI;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
-    letter-spacing: 0em;
     text-align: center;
     color: #4B164C !important;
     border: #4B164C 1px solid !important;
@@ -41,10 +38,7 @@
 }
 
 .home-h3{
-    height: 26px;
-    width: 375px;
-    left: 0px;
-    top: 345px;
+    width: 100%;
     font-family: Hellix;
     font-size: 22px;
     font-weight: 700;
@@ -54,19 +48,27 @@
     color: #4A4947;
 }
 .home-p{
-    height: 84px;
     width: 250px;
-    margin: 0 39px 0 50px;
-    top: 383px;
     font-family: Hellix;
     font-size: 17px solid;
     font-weight: 400;
     line-height: 21px;
-    letter-spacing: 0em;
     text-align: center;
     color: #4A4947;
 }
 .buttons{
     width: 100%;
     margin-left: auto;
+}
+
+@media (max-width: 400px) {
+    .register, .login{
+        height: 40px;
+    }
+    .home-h3{
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+    }
 }

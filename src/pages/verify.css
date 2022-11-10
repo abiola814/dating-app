@@ -32,14 +32,12 @@ body{
 }
 .verify-message{
   width: 100%;
-  margin: 2% 5%;
+  margin: auto;
+  margin-bottom: 60px;
   text-align: center;
 }
 .verify-message h2{
-  height: 26.756755828857422px;
-  width: 326.0360412597656px;
-  left: 24.48199462890625px;
-  top: 212.7747802734375px;
+  width: 100%;
   font-family: Hellix;
   font-size: 24px;
   font-weight: 600;
@@ -49,16 +47,14 @@ body{
   color: #000000;
 }
 .verify-message p{
-  height: 44.5945930480957px;
-  width: 335.9459533691406px;
-  left: 19.52703857421875px;
-  top: 254.3963623046875px;
+  width: 60%;
   font-family: Hellix, Roboto;
   font-size: 16px;
   font-weight: 300;
   line-height: 23px;
   letter-spacing: 0.02em;
   text-align: center;
+  margin: auto;
 }
 .inner-pin{
   display: flex;
@@ -153,4 +149,29 @@ body{
   left: 302.3330993652344px;
   top: 171.986083984375px;
   color: #000000;
+}
+
+@media (max-width: 400px) {
+  .verify-message h2 {
+    width: 100%;
+    font-family: Hellix;
+    font-size: 20px;
+  }
+  .verify-message p {
+    width: 60%;
+    font-family: Hellix, Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    margin: auto;
+  }
+
+  .fa-angle-left {
+    height: 14px;
+    width: 8px;
+    padding-left: 5%;
+    font-size: 20px;
+    color: #263238;
+  }
 }

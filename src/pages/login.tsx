@@ -91,13 +91,13 @@ const Login: React.FC = () => {
                 </form>
             </div>
             <p className="ordiv">OR</p>
-            <IonItem className="log-media">
+            <div className="log-media">
                 <Link to="" className="google"><i className="fa-brands fa-google logo-icon"></i></Link>
                 <Link to="" className="facebook"><i className="fa-brands fa-facebook logo-icon"></i></Link>
                 <Link to="" className="apple"><i className="fa-brands fa-apple logo-icon"></i></Link>
-            </IonItem>
+            </div>
             <div className="log">
-              <p>Already have an account?</p><span><Link to="/register">Register</Link></span>
+              <p>Don’t have an account?</p><span><Link to="/register">Register</Link></span>
             </div>
             </div>
         </IonContent>
