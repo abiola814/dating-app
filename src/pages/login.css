@@ -223,7 +223,7 @@ input::placeholder{
         letter-spacing: 0.02em;
         text-align: center;
         margin: auto;
-        margin-top: 15px;
+        margin-bottom: 30px;
     }
 }
 /* @media (max-width: 380px) {
