@@ -31,7 +31,7 @@ import {
 	star,
 } from "ionicons/icons";
 import Profile from "./profile";
-import { MASSAGES_ONLINE as message_data } from "../constant";
+import { MASSAGES_ONLINE } from "../constant";
 import Chat from "./Chat";
 
 const Dashboard: React.FC = () => {
@@ -51,11 +51,11 @@ const Dashboard: React.FC = () => {
 				<Route path="/dashboard/tab3" component={Profile} />
 				<Route
 					path="/dashboard/tab4"
-					render={(message_data) => <Message message_data={message_data} />}
+					render={() => <Message message_data={MASSAGES_ONLINE} />}
 				/>
 				<Route
 					path="/dashboard/tab4/:id"
-					render={(message_data) => <Chat message_data={message_data} />}
+					render={() => <Chat message_data={MASSAGES_ONLINE} />}
 				/>
 
 				<Route exact path="/dashboard">
