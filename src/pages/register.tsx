@@ -73,8 +73,7 @@ const Register: React.FC = () => {
                     </div>
                     <div className="inner-reg-input">
                         <label htmlFor="" className="label">Mobile Number</label>
-                        <PhoneInput country={'us'} containerClass="inner-type" international withCountryCallingCode countryCallingCodeEditable={false} defaultCountry="US" value={phone}
-                         onChange={handleInput} /> 
+                        <input className="input-type" value={phone} onChange={handleInput} placeholder="Enter your mobile number"/> 
                     </div>
                     <div className="inner-reg-input">
                         <label htmlFor="" className="label">Password</label>
