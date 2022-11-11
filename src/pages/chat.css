@@ -199,3 +199,51 @@
 	background: #29252e;
 	border-radius: 100px;
 }
+
+.flex-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin:10px;
+
+  }
+  
+  .mark{ 
+background: #730075;
+border-radius: 8px;
+  width:35px;
+  height:35px;
+  padding: 5px;
+  margin-right:10px ;
+  }
+
+.mediamodel{
+background: #5FD772;
+border-radius: 8px;
+width:35px;
+height:35px;
+  padding: 5px;
+  margin-right:10px ;
+  }
+.musicmodel{
+
+	background: #DD88CF;
+	border-radius: 8px;
+	width:35px;
+	height:35px;
+	padding: 5px;
+	margin-right:10px ;
+	}
+.documentmodel{
+	
+background: #4595FF;
+border-radius: 8px;
+width:35px;
+height:35px;
+		padding: 5px;
+		margin-right:10px ;
+		}
+
+.btninvisible{
+	background-color: transparent;
+}

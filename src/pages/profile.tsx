@@ -1,11 +1,34 @@
-import { IonPage, IonContent, IonHeader, IonButton } from "@ionic/react";
+
 import { CSSProperties } from "react";
 import TinderCard from 'react-tinder-card'
 import './profile.css';
+import React, { useRef } from 'react';
+import {
+  IonButton,
+  IonModal,
+  IonHeader,
+  IonContent,
+  IonToolbar,
+  IonTitle,
+  IonPage,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonIcon,
+} from '@ionic/react';
+import { personCircle } from 'ionicons/icons';
+
+import './main.css';
 
 
 const Profile: React.FC = () => {
     
+  const modal = useRef<HTMLIonModalElement>(null);
+
+  function dismiss() {
+    modal.current?.dismiss();
+  }
+
 
     return (
       <IonPage>
@@ -68,13 +91,33 @@ const Profile: React.FC = () => {
                 <h2>Settings</h2>
               </div>
               <div className="each-miscellanous">
-                <div className="icon-down sign"><i className="fa-solid fa-arrow-right-from-bracket"></i></div>
+                <div className="icon-down sign"><i id="open-custom-dialog" className="fa-solid fa-arrow-right-from-bracket"></i></div>
                 <h2>Sign Out</h2>
               </div>
             </div>
   
           </div>
         </IonContent>
+        <IonModal id="example-modal" ref={modal} trigger="open-custom-dialog">
+          <div className="wrapper">
+            <h1>Dialog header</h1>
+        
+            <IonList lines="none">
+              <IonItem button={true} detail={false} onClick={dismiss}>
+                <IonIcon icon={personCircle}></IonIcon>
+                <IonLabel>Item 1</IonLabel>
+              </IonItem>
+              <IonItem button={true} detail={false} onClick={dismiss}>
+                <IonIcon icon={personCircle}></IonIcon>
+                <IonLabel>Item 2</IonLabel>
+              </IonItem>
+              <IonItem button={true} detail={false} onClick={dismiss}>
+                <IonIcon icon={personCircle}></IonIcon>
+                <IonLabel>Item 3</IonLabel>
+              </IonItem>
+            </IonList>
+          </div>
+        </IonModal>
     </IonPage>
     );
   };

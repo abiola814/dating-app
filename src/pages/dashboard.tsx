@@ -51,10 +51,8 @@ const Dashboard: React.FC = () => {
 				<Route path="/dashboard/tab1" component={Liked} />
 				<Route path="/dashboard/tab2" component={MakeFriend} />
 				<Route path="/dashboard/tab3" component={Profile} />
-				<Route path="/dashboard/tab4" component={Message} />
-				<Route path="/dashboard/tab5" component={Favour} />
-				<Route path="/dashboard/tab4/:id" component={ () => <Chat message_data={MASSAGES_ONLINE}/>} />
-  
+				<Route exact path="/dashboard/tab4" component={Message} />
+				<Route path="/dashboard/tab5" component={Favour} />  
 				<Route exact path="/dashboard">
 					<Redirect to="/dashboard/tab4" />
 				</Route>
@@ -76,8 +74,11 @@ const Dashboard: React.FC = () => {
 				<IonTabButton tab="settingffs" href="/dashboard/tab3">
 					<IonIcon icon={person} className="IonTabButton"></IonIcon>
 				</IonTabButton>
+				<div className="close-tap"></div>
 			</IonTabBar>
+			
 		</IonTabs>
+		
 	);
 };
 export default Dashboard;

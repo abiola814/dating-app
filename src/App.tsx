@@ -57,6 +57,8 @@ const Datingrouter: React.FC = () => {
         <Route exact path="/favourite" component={ Favourite } />
         <Route exact path="/friends" component={ Friends } />
         <Route exact path="/profilesetting" component={ ProfileSetting } />
+        <Route  path="/chat/:id" component={ () => <Chat message_data={MASSAGES_ONLINE}/>} />
+
         {/* <Route exact path="/dashboard/tab4/:id" component={ () => <Chat message_data={MASSAGES_ONLINE}/>} /> */}
   </IonRouterOutlet>
 </IonReactRouter>

@@ -42,11 +42,11 @@ const Message: React.FC = () => {
 			<IonContent>
 				<aside className="content-wrapper">
 					
-					<div className="container content">
+				<div className="container content">
 						{message_data.map((info, i) => {
 							return (
 								info.messages && (
-									<div className="messages-wrapper" key={i}>
+									<Link to={`/chat/${info.id}`} className="messages-wrapper" key={i}>
 										<div className="inner-wrapper">
 											<div className="img-wrapper">
 												<img src={info.img} alt={info.img_alt} />
@@ -70,7 +70,7 @@ const Message: React.FC = () => {
 												{info.messages.length}
 											</div>
 										)}
-									</div>
+									</Link>
 								)
 							);
 						})}
