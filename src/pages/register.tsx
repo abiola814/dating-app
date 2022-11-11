@@ -1,9 +1,15 @@
 import { IonPage, IonContent,useIonToast, IonHeader,IonInput, IonButton, IonItem, IonList, IonLoading } from "@ionic/react";
+import Input, {parsePhoneNumber} from "react-phone-number-input";
 import './register.css';
+import './demo.css';
+import './intlTelInput.css';
 import { Link ,useHistory} from "react-router-dom";
 import { useState } from "react";
-import PhoneInput from 'react-phone-input-2';
+// import PhoneInput from 'react-phone-input-2';
 import { createUser } from "../firebaseconfigs";
+import 'react-phone-number-input/style.css'
+import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
+
 
 const Register: React.FC = () => {
     const [busy,setBusy] = useState<boolean>(false)
@@ -11,7 +17,7 @@ const Register: React.FC = () => {
     const [email,setEmail] = useState('');
     const [number,setNumber] = useState('');
     const [present] = useIonToast();
-    const [phone, SetPhone] = useState('');
+    const [phone, setPhone] = useState('');
 
     let history = useHistory();
     
@@ -41,6 +47,11 @@ const Register: React.FC = () => {
 
         setBusy(false)
     }
+    
+    function handleInput(e: React.ChangeEvent<HTMLInputElement>){
+      setPhone(e.target.value);
+    }
+
     return (
       <IonPage>
         <IonContent className="fit-content" scroll-y="false">
@@ -62,8 +73,7 @@ const Register: React.FC = () => {
                     </div>
                     <div className="inner-reg-input">
                         <label htmlFor="" className="label">Mobile Number</label>
-                        {/* <PhoneInput country={'us'} placeholder="Enter your Mobile Number"/> */}
-                        <IonInput type="tel" value={phone} onChange={(e: any) => SetPhone(e.target.value)} placeholder="888-888-8888"></IonInput>
+                        <input className="input-type" value={phone} onChange={handleInput} placeholder="Enter your mobile number"/> 
                     </div>
                     <div className="inner-reg-input">
                         <label htmlFor="" className="label">Password</label>
@@ -78,7 +88,7 @@ const Register: React.FC = () => {
                 </form>
             </div>
             <div className="media">
-              <p>Already have an account?</p><Link to="/login"><span>Login</span></Link>
+              <p>Already have an account?</p><Link to="/login" className="log-under"><span>Login</span></Link>
             </div>
          </IonList>
             </div>

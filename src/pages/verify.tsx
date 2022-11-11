@@ -32,7 +32,7 @@ const Verify: React.FC = () => {
             </div>
             <div className="verify-message">
               <h2>Verifiy Mobile Number</h2>
-              <p>Enter verification code that sent to +1 123 456 7890 by SMS</p>
+              <p>Enter verification code that sent to <strong>+1 123 456 7890</strong> by SMS</p>
             </div>
             <div className="pin">
               <div className="inner-pin">
