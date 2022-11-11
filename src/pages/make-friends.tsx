@@ -9,7 +9,7 @@ const MakeFriend: React.FC = () => {
 
     return (
       <IonPage  className="makebody">
-        <script src="https://kit.fontawesome.com/64bee0d46a.js" ></script>
+
         <IonHeader>
         <div className="navline">
         <img src="assets/image/icons/logo.png" alt=""/>
@@ -18,11 +18,11 @@ const MakeFriend: React.FC = () => {
         </IonHeader>
         <IonContent>
         <div className="avatars">
-        <div className="add-story-avatar">
-            <img src="assets/image/avatar/AvatarMystory.png" alt=""/>
-            <img src="assets/image/avatar/AddStory.png" className="plus-sign" alt=""/>
+
+        <div className="avatar-profile">
+            <img src="assets/image/avatar/AvatarMystory.pg" alt=""/>
+            {/* <img src="assets/image/avatar/AddStory.png" className="plus-sign" alt=""/> */}
         </div>
-        
         <div className="avatar-profile">
             <img src="assets/image/avatar/profileselena.png" alt=""/>
             <p className="avatar-name">Selena</p>
@@ -33,7 +33,7 @@ const MakeFriend: React.FC = () => {
             <p className="avatar-name">Clara</p>
         </div>
         
-                <div className="avatar-profile">
+        <div className="avatar-profile">
             <img src="assets/image/avatar/profileselena.png" alt=""/>
             <p className="avatar-name">Selena</p>
         </div>

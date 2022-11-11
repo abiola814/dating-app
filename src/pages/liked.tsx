@@ -1,12 +1,12 @@
 import { IonContent, IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
 import "./fav.css"
 
-const Favour: React.FC = () => {
+const Liked: React.FC = () => {
     return (
         <IonPage className='dashboardfav'>
         <IonHeader>
         <div className="favorite">
-            <h2>Favorite</h2>
+            <h2>Liked</h2>
             <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
         </div>
          </IonHeader>
@@ -79,4 +79,4 @@ const Favour: React.FC = () => {
     )
 }
 
-export default Favour;
+export default Liked;

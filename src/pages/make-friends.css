@@ -24,15 +24,16 @@
 }
 
 .avatars{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+	grid-auto-flow: column;
+	gap: 24px;
+	height: 88px;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
     text-align: center;
+ 
 }
 
-.add-story-avatar{
-    position: relative;
-}
 
 .plus-sign{
     position: absolute;

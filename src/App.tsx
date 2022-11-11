@@ -35,6 +35,9 @@ import { useDispatch } from 'react-redux';
 import Favourite from './pages/favourite';
 import Friends from './pages/friends';
 import ProfileSetting from './pages/profilesetting';
+import Chat from './pages/Chat';
+import { MASSAGES_ONLINE } from "./constant";
+
 
 setupIonicReact();
 
@@ -54,6 +57,7 @@ const Datingrouter: React.FC = () => {
         <Route exact path="/favourite" component={ Favourite } />
         <Route exact path="/friends" component={ Friends } />
         <Route exact path="/profilesetting" component={ ProfileSetting } />
+        {/* <Route exact path="/dashboard/tab4/:id" component={ () => <Chat message_data={MASSAGES_ONLINE}/>} /> */}
   </IonRouterOutlet>
 </IonReactRouter>
   )
@@ -69,7 +73,7 @@ const App: React.FC = () => {
       dispatch(setUserState(user.email))
       window.history.replaceState({},'','/dashboard')
     } else{
-        window.history.replaceState({},'','/profilesetting')
+        window.history.replaceState({},'','/dashboard')
 
     }
     setBusy(false)

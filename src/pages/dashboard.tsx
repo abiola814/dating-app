@@ -31,6 +31,9 @@ import {
 	star,
 } from "ionicons/icons";
 import Profile from "./profile";
+import { MASSAGES_ONLINE } from "../constant";
+import Chat from "./Chat";
+import Liked from "./liked";
 
 const Dashboard: React.FC = () => {
 	// const email = useSelector((state: any) => state.user.email)
@@ -44,19 +47,21 @@ const Dashboard: React.FC = () => {
 	return (
 		<IonTabs>
 			<IonRouterOutlet>
-				<Route path="/dashboard/tab1" component={SearchFriends} />
+				<Route path="/dashboard/tab1" component={Liked} />
 				<Route path="/dashboard/tab2" component={MakeFriend} />
 				<Route path="/dashboard/tab3" component={Profile} />
 				<Route path="/dashboard/tab4" component={Message} />
 				<Route path="/dashboard/tab5" component={Favour} />
+				<Route path="/dashboard/tab4/:id" component={ () => <Chat message_data={MASSAGES_ONLINE}/>} />
+  
 				<Route exact path="/dashboard">
-					<Redirect to="/dashboard/tab1" />
+					<Redirect to="/dashboard/tab4" />
 				</Route>
 			</IonRouterOutlet>
 
 			<IonTabBar className="IonTabButton" slot="bottom">
 				<IonTabButton tab="account" href="/dashboard/tab2">
-					<IonIcon icon={star} className="IonTabButton"></IonIcon>
+					<IonIcon icon="assets/image/icons/Vectornotification.svg" className="IonTabButton"></IonIcon>
 				</IonTabButton>
 				<IonTabButton tab="contact" href="/dashboard/tab1">
 					<IonIcon icon={heart} className="IonTabButton"></IonIcon>
