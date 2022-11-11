@@ -21,14 +21,44 @@ export const MASSAGES_ONLINE: any = [
 		online: true,
 	},
 	{
+<<<<<<< HEAD:src/constant.ts
 		id: 4,
+=======
+		name: "user3",
+		img: "/assets/image/online_image4.svg",
+		img_alt: "user3",
+		online: true,
+	},
+	{
+		name: "user3",
+		img: "/assets/image/online_image4.svg",
+		img_alt: "user3",
+		online: true,
+	},
+	{
+		name: "user3",
+		img: "/assets/image/online_image4.svg",
+		img_alt: "user3",
+		online: true,
+	},
+	{
+>>>>>>> bc580fc93d2d6d916ffa2a53f4f9f2d92a62477d:src/constant.js
 		name: "user4",
 		img: "/assets/images/online_image4.svg",
 		img_alt: "user4",
 		online: true,
 	},
 	{
+<<<<<<< HEAD:src/constant.ts
 		id: 5,
+=======
+		name: "user1",
+		img: "/assets/image/online_image1.svg",
+		img_alt: "user1",
+		online: false,
+	},
+	{
+>>>>>>> bc580fc93d2d6d916ffa2a53f4f9f2d92a62477d:src/constant.js
 		name: "user5",
 		img: "/assets/images/online_image4.svg",
 		img_alt: "user5",
@@ -134,6 +164,38 @@ export const MASSAGES_ONLINE: any = [
 		id: 18,
 		name: "John Snow",
 		img: "/assets/images/message_img7.svg",
+		img_alt: "John Snow",
+		messages: ["Hello!", "No worries"],
+		online: false,
+		read: true,
+	},
+	{
+		name: "John Snow",
+		img: "/assets/image/message_img7.svg",
+		img_alt: "John Snow",
+		messages: ["Hello!", "No worries"],
+		online: false,
+		read: true,
+	},
+	{
+		name: "John Snow",
+		img: "/assets/image/message_img7.svg",
+		img_alt: "John Snow",
+		messages: ["Hello!", "No worries"],
+		online: false,
+		read: true,
+	},
+	{
+		name: "John Snow",
+		img: "/assets/image/message_img7.svg",
+		img_alt: "John Snow",
+		messages: ["Hello!", "No worries"],
+		online: false,
+		read: true,
+	},
+	{
+		name: "John Snow",
+		img: "/assets/image/message_img7.svg",
 		img_alt: "John Snow",
 		messages: ["Hello!", "No worries"],
 		online: false,

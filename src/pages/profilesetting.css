@@ -1,0 +1,148 @@
+@font-face {
+    font-family: Hellix;
+}
+:root {
+    --match-percentage: #730075;
+    --white: white;
+    --mygray: #F4F4F4;
+}
+.bodys {
+    margin: 0 7.5%;
+    font-family: Hellix, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-settings{
+    margin: 20% 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.pictures{
+    width: 100%;
+    margin-top: 1rem;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-areas: 
+    "pic1 pic1 pic2"
+    "pic1 pic1 pic3"
+    "pic4 pic5 pic6"
+}
+
+.pic1{grid-area: pic1;}
+.pic2{grid-area: pic2;}
+.pic3{grid-area: pic3;}
+.pic4{grid-area: pic4;}
+.pic5{grid-area: pic5;}
+.pic6{grid-area: pic6;}
+[class^=pic]{
+    position: relative;
+}
+
+.cancel, .circle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position:absolute;
+    text-align: center;
+}
+.cancel{
+    background-color: #ED4C5C;
+    top: 8px;
+    right: 8px;
+    color: white;
+
+}
+
+.circle{
+    bottom: 8px;
+    right: 8px;
+    background-color: white;
+}
+
+
+.section-title{
+    margin: .75rem 0;
+    color: #29252e7e;
+}
+
+.general-info-form input, select,
+textarea, 
+.interests input,
+.questions-form input{
+    width: 100%;
+    font-size: 1rem;
+    height: 3.125;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+    background-color: var(--mygray);
+    border: none;
+    border-radius: 10px;
+}
+
+.social-url{
+    position: relative;
+}
+
+.social-url input{
+    padding-left: 35px;
+}
+
+.social{
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+    left: 2%;
+}
+
+
+.box-of-interests{
+    width: 100;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-of-interests div{
+    border: 1px solid gray;
+    border-radius: 30px;
+    display: inline-block;
+    display: flex;
+    padding: .5rem .75rem;
+    align-items: center;
+    margin: 0 .3rem .45rem 0;
+}
+
+.box-of-interests div p{
+    color: var(--match-percentage)
+}
+
+.box-of-interests i{
+    margin-right: .25rem;
+}
+
+.questions-form label{
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.save-button{
+    width: 100%;
+    background-color: var(--match-percentage);
+    font-size: 1.2rem;
+    padding: .75rem;
+    color: white;
+    border-radius: 1rem;
+    margin-bottom: .35rem;
+    border: none;
+}

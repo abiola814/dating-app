@@ -20,6 +20,7 @@ import { Route } from "react-router-dom";
 import SearchFriends from "./search-friends";
 import MakeFriend from "./make-friends";
 import Message from "./Message";
+import Favour from "./dashboadfavourite";
 import "./dashboard.css";
 
 
@@ -49,15 +50,8 @@ const Dashboard: React.FC = () => {
 				<Route path="/dashboard/tab1" component={SearchFriends} />
 				<Route path="/dashboard/tab2" component={MakeFriend} />
 				<Route path="/dashboard/tab3" component={Profile} />
-				<Route
-					path="/dashboard/tab4"
-					render={() => <Message message_data={MASSAGES_ONLINE} />}
-				/>
-				<Route
-					path="/dashboard/tab4/:id"
-					render={() => <Chat message_data={MASSAGES_ONLINE} />}
-				/>
-
+				<Route path="/dashboard/tab4" component={Message} />
+				<Route path="/dashboard/tab5" component={Favour} />
 				<Route exact path="/dashboard">
 					<Redirect to="/dashboard/tab1" />
 				</Route>
@@ -70,7 +64,7 @@ const Dashboard: React.FC = () => {
 				<IonTabButton tab="contact" href="/dashboard/tab1">
 					<IonIcon icon={heart} className="IonTabButton"></IonIcon>
 				</IonTabButton>
-				<IonTabButton tab="settingsd">
+				<IonTabButton tab="favourite" href="/dashboard/tab5">
 					<IonIcon icon={star} className="IonTabButton"></IonIcon>
 				</IonTabButton>
 				<IonTabButton tab="message" href="/dashboard/tab4">

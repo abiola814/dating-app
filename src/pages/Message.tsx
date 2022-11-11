@@ -19,7 +19,11 @@ const Message: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 	return (
 		<IonPage>
 			<IonHeader>
+<<<<<<< HEAD
 				<IonToolbar>
+=======
+			
+>>>>>>> bc580fc93d2d6d916ffa2a53f4f9f2d92a62477d
 					<aside className="wrapper">
 						<h4 className="h4-margin">Online</h4>
 						<div className="online">
@@ -36,11 +40,11 @@ const Message: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 							})}
 						</div>
 					</aside>
-				</IonToolbar>
+					<h4 className="content-wrapper">My chats</h4>
 			</IonHeader>
 			<IonContent>
 				<aside className="content-wrapper">
-					<h4>My chats</h4>
+					
 					<div className="container content">
 						{message_data.map((info, i) => {
 							return (

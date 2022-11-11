@@ -33,6 +33,8 @@ import Dashboard from './pages/dashboard';
 import { setUserState } from './redux/actions';
 import { useDispatch } from 'react-redux';
 import Favourite from './pages/favourite';
+import Friends from './pages/friends';
+import ProfileSetting from './pages/profilesetting';
 
 setupIonicReact();
 
@@ -50,6 +52,8 @@ const Datingrouter: React.FC = () => {
         <Route exact path="/search-friends" component={ SearchFriends } />
         <Route exact path="/profile" component={ Profile } />
         <Route exact path="/favourite" component={ Favourite } />
+        <Route exact path="/friends" component={ Friends } />
+        <Route exact path="/profilesetting" component={ ProfileSetting } />
   </IonRouterOutlet>
 </IonReactRouter>
   )
@@ -65,7 +69,11 @@ const App: React.FC = () => {
       dispatch(setUserState(user.email))
       window.history.replaceState({},'','/dashboard')
     } else{
+<<<<<<< HEAD
         window.history.replaceState({},'','/dashboard')
+=======
+        window.history.replaceState({},'','/profilesetting')
+>>>>>>> bc580fc93d2d6d916ffa2a53f4f9f2d92a62477d
 
     }
     setBusy(false)
