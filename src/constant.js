@@ -21,6 +21,13 @@ export const MASSAGES_ONLINE = [
 		online: true,
 	},
 	{
+		id:4,
+		name: "user3",
+		img: "/assets/image/online_image4.svg",
+		img_alt: "user3",
+		online: true,
+	},
+	{
 		id: 17,
 		name: "user3",
 		img: "/assets/image/online_image6.svg",
@@ -37,7 +44,6 @@ export const MASSAGES_ONLINE = [
 
 	{
 		id: 4,
-
 		name: "user4",
 		img: "/assets/image/online_image4.svg",
 		img_alt: "user4",
@@ -45,7 +51,13 @@ export const MASSAGES_ONLINE = [
 	},
 
 	{
-		id: 5,
+		id:14,
+		name: "user1",
+		img: "/assets/image/online_image1.svg",
+		img_alt: "user1",
+		online: false,
+	},
+	{
 		name: "user5",
 		img: "/assets/image/online_image4.svg",
 		img_alt: "user5",
@@ -188,4 +200,70 @@ export const MASSAGES_ONLINE = [
 		online: false,
 		read: true,
 	},
+];
+
+
+export const INTERESTS = [
+	"⚽️ Football",
+	"🍃  Nature",
+	"🗣 Language",
+	"📸 Photography",
+	"✍🏻 Writing",
+	"✍🏻 Writing",
+	"⚽️ Football",
+	"🍃  Nature",
+	"🗣 Language",
+	"📸 Photography",
+	"✍🏻 Writing",
+	"✍🏻 Writing",
+	"⚽️ Football",
+	"🍃  Nature",
+	"🗣 Language",
+	"📸 Photography",
+	"✍🏻 Writing",
+	"✍🏻 Writing",
+];
+
+// selections are replicated to allow for mapping
+export const SELCECTIONS = [
+	[
+		{ name: "green", label: "Answer 01" },
+		{ name: "blue", label: "Answer 02" },
+		{ name: "red", label: "Answer 03" },
+		{ name: "yellow", label: "Answer 04" },
+		{ name: "orange", label: "Answer 05" },
+		{ name: "pink", label: "Answer 06" },
+		{ name: "purple", label: "Answer 07" },
+		{ name: "grey", label: "Answer 08" },
+	],
+	[
+		{ name: "green", label: "Answer 01" },
+		{ name: "blue", label: "Answer 02" },
+		{ name: "red", label: "Answer 03" },
+		{ name: "yellow", label: "Answer 04" },
+		{ name: "orange", label: "Answer 05" },
+		{ name: "pink", label: "Answer 06" },
+		{ name: "purple", label: "Answer 07" },
+		{ name: "grey", label: "Answer 08" },
+	],
+	[
+		{ name: "green", label: "Answer 01" },
+		{ name: "blue", label: "Answer 02" },
+		{ name: "red", label: "Answer 03" },
+		{ name: "yellow", label: "Answer 04" },
+		{ name: "orange", label: "Answer 05" },
+		{ name: "pink", label: "Answer 06" },
+		{ name: "purple", label: "Answer 07" },
+		{ name: "grey", label: "Answer 08" },
+	],
+	[
+		{ name: "green", label: "Answer 01" },
+		{ name: "blue", label: "Answer 02" },
+		{ name: "red", label: "Answer 03" },
+		{ name: "yellow", label: "Answer 04" },
+		{ name: "orange", label: "Answer 05" },
+		{ name: "pink", label: "Answer 06" },
+		{ name: "purple", label: "Answer 07" },
+		{ name: "grey", label: "Answer 08" },
+	],
 ];

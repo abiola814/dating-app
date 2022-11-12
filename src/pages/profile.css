@@ -166,6 +166,7 @@ body{
     height: 60px;
     padding-left: 15px;
     border-bottom:#0000000A 2px solid;
+    align-items: center;
 }
 
 .each-miscellanous i{
@@ -246,4 +247,24 @@ body{
     .each-miscellanous h2{
         font-size: 16px;
     }
+    .at-email {
+        font-size: 18px;
+    }
+}
+
+.signoutflex{
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+.signoutp{
+    max-width:220px;
+text-align: center;
+}
+.btnsignout{
+    width: 70%;
+}
+.signoutcard{
+    bottom: 0;
 }

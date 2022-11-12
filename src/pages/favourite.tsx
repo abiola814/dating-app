@@ -1,68 +1,40 @@
 import { IonContent, IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
 import './favourite.css';
-
+import { INTERESTS } from "../constant";
+import { useHistory } from 'react-router';
 
 const Favourite: React.FC = () => {
+  let history = useHistory();
+  function submit(){
+      history.push('/question')  
+  }
   return (
     <IonPage>
-     <IonHeader className="fav-main">
-        <img src="assets/image/back.png" alt="main-logo" className='reg-img'/>
-    </IonHeader>
-      <IonContent>
-          <div className="favorite-interest">
-            <h1 className='interesth1'>Pick your interests...</h1>
-            <div className="inner-input">
-                <input type="text" placeholder="Search" className="input-type"/>
-                <div>
-                <IonNote className='select-int'>You should select at least 5 interests</IonNote>
-                </div>
-            </div>
-          </div>
-        <IonGrid>
-        <IonRow className='modifyrow'>
-          <IonCol className='select__item'>✍🏻Writing</IonCol>
-          <IonCol className='select__item'>📸Photography</IonCol>
-          <IonCol className='select__item'>🗣Language</IonCol>
-        </IonRow>
-      </IonGrid>
-      <IonGrid>
-        <IonRow className='modifyrow'>
-          <IonCol  className='select__item'>✍🏻Writing </IonCol>
-          <IonCol  className='select__item'>📸Photography </IonCol>
-          <IonCol  className='select__item'>🗣Language</IonCol>
-        </IonRow>
-      </IonGrid>
-            <IonGrid>
-        <IonRow className='modifyrow'>
-          <IonCol  className='select__item'>✍🏻Writing</IonCol>
-          <IonCol  className='select__item'>📸Photography</IonCol>
-          <IonCol  className='select__item'>🗣Language</IonCol>
-        </IonRow>
-      </IonGrid>
-      <IonGrid>
-        <IonRow className='modifyrow'>
-          <IonCol  className='select__item'>✍🏻Writing</IonCol>
-          <IonCol  className='select__item'>📸Photography</IonCol>
-          <IonCol  className='select__item'>🗣Language</IonCol>
-        </IonRow>
-      </IonGrid>
-      <IonGrid>
-        <IonRow className='modifyrow'>
-          <IonCol  className='select__item'>✍🏻Writing </IonCol>
-          <IonCol  className='select__item'>📸Photography </IonCol>
-          <IonCol  className='select__item'>🗣Language</IonCol>
-        </IonRow>
-      </IonGrid>
-            <IonGrid>
-        <IonRow className='modifyrow'>
-          <IonCol  className='select__item'>✍🏻Writing</IonCol>
-          <IonCol  className='select__item'>📸Photography</IonCol>
-          <IonCol  className='select__item'>🗣Language</IonCol>
-        </IonRow>
-      </IonGrid>
-      
 
-      <IonButton className='buttonposition'>Next</IonButton>
+      <IonContent>
+      <div className="interestcontainer">
+				<div className="img-wrapper">
+					<img
+						src="assets/image/frndr_logo2.png"
+						alt="frndr logo"
+						className="interest-image-logo"
+					/>
+				</div>
+				<div className="interestheader">
+					<h4>Pick your Interests...</h4>
+					<div>
+						<input type="text" placeholder="search" />
+					</div>
+					<p>You should select at least 5 interests</p>
+				</div>
+				<div className="interests">
+					{INTERESTS.map((item, i) => {
+						return <span key={i}>{item}</span>;
+					})}
+				</div>
+				<button onClick={submit} type="button">Next</button>
+				<div className="tab"></div>
+			</div>
       </IonContent>
   </IonPage>
   );

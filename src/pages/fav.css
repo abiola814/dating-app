@@ -16,9 +16,10 @@
 }
 
 .favorite{
-    margin: 20% 0 0 0;
+    margin: 10% 1% 0 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .row {

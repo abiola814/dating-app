@@ -108,7 +108,7 @@ const Chat: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 					</div>
 				</section>
 			
-				<IonModal ref={modal} trigger="open-modal" initialBreakpoint={0.25} breakpoints={[0, 0.25, 0.5, 0.75]}>
+				<IonModal ref={modal} trigger="open-modal" initialBreakpoint={0.3} breakpoints={[0, 0.3, 0.5, 0.5]}>
 
 			<IonContent className="ion-padding">
             <IonList>

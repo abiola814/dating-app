@@ -1,14 +1,14 @@
-import { IonContent,IonSlide, IonSlides,IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
+import { IonContent,IonBackButton,IonSlide, IonSlides,IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
 
 import './profilesetting.css'
 const ProfileSetting: React.FC = () => {
     return (
         <IonPage className='bodys'>
-             <script src="https://kit.fontawesome.com/64bee0d46a.js" ></script>
+            
         <IonHeader>
         <div className="profile-settings">
-            <i className="fa-solid fa-chevron-left"></i>
-            <h2>Profile Settings</h2>
+        <IonBackButton text="" className="fa-solid fa-angle-left" defaultHref="/dashboard/tab3" />
+            <h2 className='prosetpad'>Profile Settings</h2>
         </div>
          </IonHeader>
          <IonContent>

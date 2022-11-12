@@ -20,7 +20,7 @@ const Message: React.FC = () => {
 	return (
 		<IonPage>
 			<IonHeader>
-			
+
 					<aside className="wrapper">
 						<h4 className="h4-margin">Online</h4>
 						<div className="online">

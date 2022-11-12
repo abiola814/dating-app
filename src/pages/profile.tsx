@@ -22,11 +22,14 @@ import { personCircle } from 'ionicons/icons';
 
 import './main.css';
 
-
+import { useHistory } from "react-router-dom";
 const Profile: React.FC = () => {
     
   const modal = useRef<HTMLIonModalElement>(null);
-
+  let history = useHistory();
+  function setting(){
+      history.push('/account-settings')  
+  }
   function dismiss() {
     modal.current?.dismiss();
   }
@@ -38,7 +41,7 @@ const Profile: React.FC = () => {
           <div className="profile">
             <div className="header-profile">
               <h2>Profile</h2>
-              <i className="fa-duotone fa-magnifying-glass"></i>
+              <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
             </div>
             <div className="profile-photo">
               <div className="image-photo">
@@ -48,7 +51,7 @@ const Profile: React.FC = () => {
               <div className="profile-name">
                 <div className="profile-user">
                   <h2>John Doe</h2>
-                  <Link to=""><i className="fa-solid fa-pen"></i></Link>
+                  <Link to="/profilesetting"><i className="fa-solid fa-pen"></i></Link>
                 </div>
                   <span className="at-email">@johndoe</span>
               </div>
@@ -88,37 +91,35 @@ const Profile: React.FC = () => {
                 <div className="icon-down"><i className="fa-solid fa-crown crown"></i></div>
                 <h2>FRNDR Premium</h2>
               </div>
-              <div className="each-miscellanous">
+              <div className="each-miscellanous" onClick={setting}>
                 <div className="icon-down"><i className="fa-solid fa-gear set"></i></div>
                 <h2>Settings</h2>
               </div>
-              <div className="each-miscellanous">
-                <div className="icon-down"><i id="open-custom-dialog" className="fa-solid fa-arrow-right-from-bracket sign"></i></div>
+              <div className="each-miscellanous" id="open-custom">
+                <div className="icon-down"><i  className="fa-solid fa-arrow-right-from-bracket sign"></i></div>
                 <h2>Sign Out</h2>
               </div>
             </div>
   
           </div>
         </IonContent>
-        <IonModal id="example-modal" ref={modal} trigger="open-custom-dialog">
-          <div className="wrapper">
-            <h1>Dialog header</h1>
+				<IonModal ref={modal} trigger="open-custom" initialBreakpoint={0.3} >
+        <IonContent >
+
         
-            <IonList lines="none">
-              <IonItem button={true} detail={false} onClick={dismiss}>
-                <IonIcon icon={personCircle}></IonIcon>
-                <IonLabel>Item 1</IonLabel>
-              </IonItem>
-              <IonItem button={true} detail={false} onClick={dismiss}>
-                <IonIcon icon={personCircle}></IonIcon>
-                <IonLabel>Item 2</IonLabel>
-              </IonItem>
-              <IonItem button={true} detail={false} onClick={dismiss}>
-                <IonIcon icon={personCircle}></IonIcon>
-                <IonLabel>Item 3</IonLabel>
-              </IonItem>
+            <IonList className="signoutcard" >
+                <div className="signoutflex">
+                <h2>Are you sure?</h2>	
+              </div>
+              <div className="signoutflex">
+              <p className='signoutp'> Do you want to sign out from the account?</p>
+              </div>
+              <div className="signoutflex">
+                  <IonButton className="btnsignout">sign out</IonButton> 
+              </div>
             </IonList>
-          </div>
+        
+          </IonContent>
         </IonModal>
     </IonPage>
     );
