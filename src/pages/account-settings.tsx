@@ -27,15 +27,16 @@ const AccountSettings: React.FC = () => {
                         </div>
                     </div>
                     <div className="account-discovery">
-                        <h3>Discovery</h3>
+                        <h2 className="set-head">Discovery</h2>
                         <div className="account-location">
+                            <label htmlFor="">Location</label>
                             <input type="text" placeholder="Current location(San Francisco)"/>
                             <i className="fa-solid fa-location-dot"></i>
                         </div>
                     </div>
                     <div className="account-distance">
                         <div className="kilo-dist">
-                            <h3>Distance</h3>
+                            <h2>Distance</h2>
                             <p>50 km</p>
                         </div>
                         <div className="progress"></div>

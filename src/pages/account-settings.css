@@ -48,3 +48,12 @@ body{
     letter-spacing: 0.02em;
     text-align: left;
 }
+.account-location label{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-bottom: 10px;
+}
