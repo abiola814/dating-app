@@ -8,6 +8,7 @@ import Verify from './pages/verify';
 import MakeFriend from './pages/make-friends';
 import SearchFriends from './pages/search-friends';
 import Profile from './pages/profile';
+import AccountSettings from './pages/account-settings';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -69,11 +70,7 @@ const App: React.FC = () => {
       dispatch(setUserState(user.email))
       window.history.replaceState({},'','/dashboard')
     } else{
-<<<<<<< HEAD
         window.history.replaceState({},'','/dashboard')
-=======
-        window.history.replaceState({},'','/profilesetting')
->>>>>>> bc580fc93d2d6d916ffa2a53f4f9f2d92a62477d
 
     }
     setBusy(false)

@@ -14,7 +14,7 @@ const Profile: React.FC = () => {
           <div className="profile">
             <div className="header-profile">
               <h2>Profile</h2>
-              <i className="fa-duotone fa-magnifying-glass"></i>
+              <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
             </div>
             <div className="profile-photo">
               <div className="image-photo">
