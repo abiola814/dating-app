@@ -55,6 +55,7 @@ const Datingrouter: React.FC = () => {
         <Route exact path="/favourite" component={ Favourite } />
         <Route exact path="/friends" component={ Friends } />
         <Route exact path="/profilesetting" component={ ProfileSetting } />
+        <Route exact path="/account-settings" component={ AccountSettings } />
   </IonRouterOutlet>
 </IonReactRouter>
   )
@@ -70,7 +71,7 @@ const App: React.FC = () => {
       dispatch(setUserState(user.email))
       window.history.replaceState({},'','/dashboard')
     } else{
-        window.history.replaceState({},'','/dashboard')
+        window.history.replaceState({},'','/account-settings')
 
     }
     setBusy(false)

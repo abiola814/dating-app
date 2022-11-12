@@ -1,0 +1,49 @@
+body{
+    font-family: Hellix;
+}
+.main-account{
+    padding: 0 15px;
+    padding-top: 60px;
+}
+    .account-head{
+        margin-bottom: 31px;
+    }
+.account-head, .account-set{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.account-set{
+    width: 35%;
+}
+.account-set h2{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+}
+.account-head i{
+    color: #0000007A;
+    font-size: 20px;
+}
+.set-head{
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2;
+    line-height: 19px;
+    text-align: left;
+    color: #29252E6B;
+    margin-bottom: 20px;
+}
+.phone-set{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.phone-set h3{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0.02-em;
+    text-align: left;
+}

@@ -10,13 +10,13 @@ const AccountSettings: React.FC = () => {
                 <div className="main-account">
                     <div className="account-head">
                         <div className="account-set">
-                            <IonBackButton text="" className="fa-solid fa-angle-left" defaultHref="register" />
+                            <IonBackButton text="" className="fa-solid fa-angle-left" defaultHref="profile" />
                             <h2>Settings</h2>
                         </div>
                         <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div className="acct-set">
-                        <h3>Account Settings</h3>
+                        <h2 className="set-head">Account Settings</h2>
                         <div className="phone-set">
                             <h3>Phone number</h3>
                             <p>91121334243</p>
