@@ -1,5 +1,7 @@
 
+
 import { CSSProperties } from "react";
+import { Link } from "react-router-dom";
 import TinderCard from 'react-tinder-card'
 import './profile.css';
 import React, { useRef } from 'react';
@@ -41,14 +43,14 @@ const Profile: React.FC = () => {
             <div className="profile-photo">
               <div className="image-photo">
                 <img src="assets/image/Avatar.png" alt="" />
-                <span className="combo"><h3>75% Completed</h3></span>
+                <span><h3 className="combo">75% Completed</h3></span>
               </div>
               <div className="profile-name">
-                <h3>John Doe</h3>
                 <div className="profile-user">
-                  <span>@johndoe</span>
-                  <i className="fa-solid fa-pen"></i>
+                  <h2>John Doe</h2>
+                  <Link to=""><i className="fa-solid fa-pen"></i></Link>
                 </div>
+                  <span className="at-email">@johndoe</span>
               </div>
             </div>
             <div className="profile-about">
@@ -83,15 +85,15 @@ const Profile: React.FC = () => {
             </div>
             <div className="miscellanous">
               <div className="each-miscellanous">
-                <div className="icon-down crown"><i className="fa-solid fa-crown"></i></div>
+                <div className="icon-down"><i className="fa-solid fa-crown crown"></i></div>
                 <h2>FRNDR Premium</h2>
               </div>
               <div className="each-miscellanous">
-                <div className="icon-down set"><i className="fa-solid fa-gear"></i></div>
+                <div className="icon-down"><i className="fa-solid fa-gear set"></i></div>
                 <h2>Settings</h2>
               </div>
               <div className="each-miscellanous">
-                <div className="icon-down sign"><i id="open-custom-dialog" className="fa-solid fa-arrow-right-from-bracket"></i></div>
+                <div className="icon-down"><i id="open-custom-dialog" className="fa-solid fa-arrow-right-from-bracket sign"></i></div>
                 <h2>Sign Out</h2>
               </div>
             </div>

@@ -30,6 +30,8 @@ import {
 	chatbubbleEllipses,
 	settings,
 	star,
+	pricetag,
+	chatbubbles,
 } from "ionicons/icons";
 import Profile from "./profile";
 import { MASSAGES_ONLINE } from "../constant";
@@ -60,7 +62,7 @@ const Dashboard: React.FC = () => {
 
 			<IonTabBar className="IonTabButton" slot="bottom">
 				<IonTabButton tab="account" href="/dashboard/tab2">
-					<IonIcon icon="assets/image/icons/Vectornotification.svg" className="IonTabButton"></IonIcon>
+					<IonIcon icon={pricetag} className="IonTabButton"></IonIcon>
 				</IonTabButton>
 				<IonTabButton tab="contact" href="/dashboard/tab1">
 					<IonIcon icon={heart} className="IonTabButton"></IonIcon>
@@ -69,7 +71,7 @@ const Dashboard: React.FC = () => {
 					<IonIcon icon={star} className="IonTabButton"></IonIcon>
 				</IonTabButton>
 				<IonTabButton tab="message" href="/dashboard/tab4">
-					<IonIcon icon={chatbubbleEllipses} className="IonTabButton"></IonIcon>
+					<IonIcon icon={chatbubbles} className="IonTabButton"></IonIcon>
 				</IonTabButton>
 				<IonTabButton tab="settingffs" href="/dashboard/tab3">
 					<IonIcon icon={person} className="IonTabButton"></IonIcon>
