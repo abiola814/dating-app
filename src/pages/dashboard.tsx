@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
 				<Route exact path="/dashboard/tab4" component={Message} />
 				<Route path="/dashboard/tab5" component={Favour} />  
 				<Route exact path="/dashboard">
-					<Redirect to="/dashboard/tab4" />
+					<Redirect to="/dashboard/tab2" />
 				</Route>
 			</IonRouterOutlet>
 
