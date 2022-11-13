@@ -16,6 +16,7 @@ h6 {
 	align-items: center;
 	overflow-x: scroll;
 	scroll-behavior: smooth;
+	
 
 	/* @apply grid grid-flow-col gap-4 h-[88px] items-center justify-items-end overflow-x-scroll scroll-smooth  touch-pan-x hover:overflow-x-scroll snap-center; */
 }
@@ -23,7 +24,9 @@ h6 {
 	margin-left: 27px;
 }
 .wrapper {
-	overflow-x: hidden;
+	margin-top: 30px;
+	overflow: hidden;
+	
 	max-width: 375px;
 }
 .img-wrapper {
@@ -71,8 +74,9 @@ h6 {
 }
 
 .container.content {
-	max-height: 486px;
+
 	overflow-y: scroll;
+	overflow: hidden;
 	margin-top: 21px;
 	display: flex;
 	flex-direction: column;

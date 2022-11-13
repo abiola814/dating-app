@@ -65,6 +65,13 @@ body{
     text-align: center;
 }
 
+.profile-interest{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
 .profile-user .fa-pen{
     margin-left: 10px;
     top: 6;
@@ -83,6 +90,9 @@ body{
     color: #29252E54;
 }
 
+.header-interest{
+    padding-left: 30px;
+}
 .profile-about{
     height: 200px;
     padding-top: 15px;
@@ -124,12 +134,6 @@ body{
     text-align: left;
     color: linear-gradient(0deg, #29252E, #29252E);
 }
-.bigger{
-    height: 40px;
-    border-radius: 32px;
-    padding: 8px 20px;
-    border: 1px solid #4B164C33;
-}
 
 .profile-display{
     margin-top: 20px;
@@ -166,6 +170,7 @@ body{
     height: 60px;
     padding-left: 15px;
     border-bottom:#0000000A 2px solid;
+    align-items: center;
 }
 
 .each-miscellanous i{
@@ -243,7 +248,27 @@ body{
         padding: 7px;
         border-radius: 7px;
     }
-    .each-miscellanous h2{
-        font-size: 16px;
+    .premium{
+        font-size: 20px !important;
     }
+    .at-email {
+        font-size: 18px;
+    }
+}
+
+.signoutflex{
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+.signoutp{
+    max-width:220px;
+text-align: center;
+}
+.btnsignout{
+    width: 70%;
+}
+.signoutcard{
+    bottom: 0;
 }

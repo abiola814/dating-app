@@ -14,12 +14,13 @@ import "./message.css";
 import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 import { createUser } from "../firebaseconfigs";
+import { MASSAGES_ONLINE as message_data } from "../constant";
 
-const Message: React.FC<{ message_data: any[] }> = ({ message_data }) => {
+const Message: React.FC = () => {
 	return (
 		<IonPage>
 			<IonHeader>
-				<IonToolbar>
+
 					<aside className="wrapper">
 						<h4 className="h4-margin">Online</h4>
 						<div className="online">
@@ -36,16 +37,16 @@ const Message: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 							})}
 						</div>
 					</aside>
-				</IonToolbar>
+					<h4 className="content-wrapper">My chats</h4>
 			</IonHeader>
 			<IonContent>
 				<aside className="content-wrapper">
-					<h4>My chats</h4>
-					<div className="container content">
+					
+				<div className="container content">
 						{message_data.map((info, i) => {
 							return (
 								info.messages && (
-									<Link to={`/${info.id}`} className="messages-wrapper" key={i}>
+									<Link to={`/chat/${info.id}`} className="messages-wrapper" key={i}>
 										<div className="inner-wrapper">
 											<div className="img-wrapper">
 												<img src={info.img} alt={info.img_alt} />

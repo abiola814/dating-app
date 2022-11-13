@@ -8,6 +8,7 @@ import Verify from './pages/verify';
 import MakeFriend from './pages/make-friends';
 import SearchFriends from './pages/search-friends';
 import Profile from './pages/profile';
+import AccountSettings from './pages/account-settings';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,6 +34,12 @@ import Dashboard from './pages/dashboard';
 import { setUserState } from './redux/actions';
 import { useDispatch } from 'react-redux';
 import Favourite from './pages/favourite';
+import Friends from './pages/friends';
+import ProfileSetting from './pages/profilesetting';
+import Chat from './pages/Chat';
+import { MASSAGES_ONLINE } from "./constant";
+import Question from './pages/question';
+
 
 setupIonicReact();
 
@@ -50,6 +57,11 @@ const Datingrouter: React.FC = () => {
         <Route exact path="/search-friends" component={ SearchFriends } />
         <Route exact path="/profile" component={ Profile } />
         <Route exact path="/favourite" component={ Favourite } />
+        <Route exact path="/friends" component={ Friends } />
+        <Route exact path="/profilesetting" component={ ProfileSetting } />
+        <Route  path="/chat/:id" component={ () => <Chat message_data={MASSAGES_ONLINE}/>} />
+        <Route exact path="/account-settings" component={ AccountSettings } />
+        <Route exact path="/question" component={ Question } />
   </IonRouterOutlet>
 </IonReactRouter>
   )
@@ -65,7 +77,7 @@ const App: React.FC = () => {
       dispatch(setUserState(user.email))
       window.history.replaceState({},'','/dashboard')
     } else{
-        window.history.replaceState({},'','/dashboard')
+        window.history.replaceState({},'','/account-settings')
 
     }
     setBusy(false)

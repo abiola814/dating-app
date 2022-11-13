@@ -28,9 +28,9 @@ const Register: React.FC = () => {
     await createUser(email,password)
     .then((userCredential) => {
     // Signed in 
-    const user = userCredential.user;
-    console.log(user)
-    history.push('/login')    // ...
+    // const user = userCredential.user;
+    // console.log(user)
+    history.push('/verify')    // ...
   
   })
     .catch((error) => {
