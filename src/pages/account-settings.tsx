@@ -26,15 +26,17 @@ const AccountSettings: React.FC = () => {
                         </div>
                         <div className="phone-set">
                             <h3>Email</h3>
-                            <Link to=""><p>johndoe@gmail.com</p></Link>
+                            <Link to="" className="settings-email"><p>johndoe@gmail.com</p></Link>
                         </div>
                     </div>
                     <div className="account-discovery">
                         <h2 className="set-head">Discovery</h2>
                         <div className="account-location">
                             <label htmlFor="">Location</label>
-                            <input className="location-input fa-solid fa-location-dot" type="text" placeholder="Current location(San Francisco)"/>
-                            <i className="fa-solid fa-location-dot"></i>
+                            <p>
+                                <input className="" type="text" placeholder="Current location(San Francisco)"/>
+                                <i className="fa-solid fa-location-dot"></i>
+                            </p>
                         </div>
                     </div>
                     <div className="account-distance">

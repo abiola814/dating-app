@@ -54,19 +54,20 @@
 }
 
 .questioncontainer button {
-	margin: auto 0 40px;
-	justify-self: flex-end;
-	align-items: flex-end;
-	width: 100%;
-	background: linear-gradient(91.34deg, #4b164c 4.28%, #730075 102.07%);
-	border-radius: 10px;
-	font-family: "Poppins";
-	font-style: normal;
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 24px;
-	padding: 14px;
-	color: #ffffff;
+    margin: auto;
+    justify-self: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    background: linear-gradient(91.34deg, #4b164c 4.28%, #730075 102.07%);
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* padding: 14px; */
+    color: #ffffff;
+    height: 50px;
 }
 
 .questioncontainer .tab {

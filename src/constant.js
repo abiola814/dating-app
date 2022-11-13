@@ -224,6 +224,14 @@ export const INTERESTS = [
 	"✍🏻 Writing",
 ];
 
+export const ProfileInterest = [
+	"⚽️ Football",
+	"🍃  Nature",
+	"🗣 Language",
+	"📸 Photography",
+	"✍🏻 Writing",
+];
+
 // selections are replicated to allow for mapping
 export const SELCECTIONS = [
 	[

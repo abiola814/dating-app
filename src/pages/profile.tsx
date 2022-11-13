@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import TinderCard from 'react-tinder-card'
 import './profile.css';
 import React, { useRef } from 'react';
+import { ProfileInterest } from "../constant";
+
 import {
   IonButton,
   IonModal,
@@ -65,12 +67,10 @@ const Profile: React.FC = () => {
             </div>
             <div className="header-interest">
               <h2>Interest</h2>
-              <div className="profile-interest">
-                <div className="mandem"><p>⚽️ Football</p></div>
-                <div className="mandem"><p>🍃  Nature</p></div>
-                <div className="bigger"><p>🗣 Language</p></div>
-                <div className="bigger"><p className="">📸 Photography</p></div>
-                <div className="mandem"><p>✍🏻 Writing</p></div>
+              <div className="interests">
+                {ProfileInterest.map((item, i) => {
+                  return <span key={i}>{item}</span>;
+                })}
               </div>
             </div>
             <div className="profile-display">
@@ -89,15 +89,15 @@ const Profile: React.FC = () => {
             <div className="miscellanous">
               <div className="each-miscellanous">
                 <div className="icon-down"><i className="fa-solid fa-crown crown"></i></div>
-                <h2>FRNDR Premium</h2>
+                <h2 className="premium">FRNDR Premium</h2>
               </div>
               <div className="each-miscellanous" onClick={setting}>
                 <div className="icon-down"><i className="fa-solid fa-gear set"></i></div>
-                <h2>Settings</h2>
+                <h2 className="premium">Settings</h2>
               </div>
               <div className="each-miscellanous" id="open-custom">
                 <div className="icon-down"><i  className="fa-solid fa-arrow-right-from-bracket sign"></i></div>
-                <h2>Sign Out</h2>
+                <h2 className="premium">Sign Out</h2>
               </div>
             </div>
   
