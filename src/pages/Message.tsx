@@ -20,9 +20,9 @@ const Message: React.FC = () => {
 	return (
 		<IonPage>
 			<IonHeader>
-
+				<h2 className="top-message">Messages</h2>
 					<aside className="wrapper">
-						<h4 className="h4-margin">Online</h4>
+						<h4 className="h4-margin content-wrapper">Online</h4>
 						<div className="online">
 							{message_data.map((info, i) => {
 								return (
@@ -53,7 +53,7 @@ const Message: React.FC = () => {
 												{info.online && <div className="online-sign"></div>}
 											</div>
 											<div className="messages">
-												<h5>{info.name}</h5>
+												<h5 className="eniyan">{info.name}</h5>
 												{info.read ? (
 													<p className="read">
 														{info.messages[info.messages.length - 1]}

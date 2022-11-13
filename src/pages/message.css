@@ -7,6 +7,16 @@ h6 {
 	margin: 0;
 	padding: 0;
 }
+.top-message{
+	font-family: Nexa Bold;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	margin-top: 15px;
+	margin-left: 30px;
+}
 
 .online {
 	display: grid;
@@ -24,7 +34,7 @@ h6 {
 	margin-left: 27px;
 }
 .wrapper {
-	margin-top: 30px;
+	margin-top: 20px;
 	overflow: hidden;
 	
 	max-width: 375px;
@@ -69,8 +79,14 @@ h6 {
 	color: rgba(41, 37, 46, 0.33);
 }
 
+.eniyan{
+	color: #000;
+	text-decoration: none;
+}
 .content-wrapper {
-	margin-inline: 27px;
+    margin-inline: 27px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .container.content {
@@ -88,6 +104,7 @@ h6 {
 	margin-top: 10px;
 	align-items: center;
 	justify-content: space-between;
+	text-decoration: none;
 }
 .messages-wrapper .inner-wrapper {
 	display: flex;
