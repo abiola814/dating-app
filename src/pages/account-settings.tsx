@@ -48,7 +48,7 @@ const AccountSettings: React.FC = () => {
                     </div>
                     <div className="account-age">
                         <div className="kilo-dist">
-                            <h3>Age Range</h3>
+                            <h2>Age Range</h2>
                             <p>2-6</p>
                         </div>
                         <IonRange
