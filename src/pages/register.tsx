@@ -1,4 +1,4 @@
-import { IonPage, IonContent,useIonToast, IonButton, IonList, IonLoading, useIonRouter,IonImg } from "@ionic/react";
+import { IonPage, IonContent,useIonToast, IonButton, IonList, IonLoading, useIonRouter } from "@ionic/react";
 import './register.css';
 import './demo.css';
 import './intlTelInput.css';
@@ -56,7 +56,7 @@ const Register: React.FC = () => {
             <div className="reg-main">
          <IonList>
             <div className='image'>
-                <IonImg src="assets/image/back.png" alt="main-logo" className='reg-img'/>
+                <img src="assets/image/back.png" alt="main-logo" className='reg-img'/>
             </div>
             <div className='letter-reg'>
                 <h2 className="reg-h2">Register to your account</h2>

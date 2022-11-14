@@ -2,15 +2,18 @@ import {
 	IonPage,
 	IonContent,
 	IonHeader,
-	IonImg
+	IonImg,IonLoading
 } from "@ionic/react";
 import "./message.css";
 import { Link} from "react-router-dom";
 import { MASSAGES_ONLINE as message_data } from "../constant";
+import React from "react";
+import { Suspense } from "react";
 
 const Message: React.FC = () => {
 	return (
 		<IonPage>
+	 <React.StrictMode>
 			<IonHeader>
 				<h2 className="top-message">Messages</h2>
 					<aside className="wrapper">
@@ -69,6 +72,7 @@ const Message: React.FC = () => {
 					</div>
 				</aside>
 			</IonContent>
+			</React.StrictMode>
 		</IonPage>
 	);
 };

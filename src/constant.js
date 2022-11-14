@@ -1,20 +1,20 @@
 export const MASSAGES_ONLINE = [
 	{
-		id: 15,
+		id: 1,
 		name: "user1",
 		img: "/assets/image/online_image1.svg",
 		img_alt: "user1",
 		online: true,
 	},
 	{
-		id: 15,
+		id: 2223,
 		name: "user2",
 		img: "/assets/image/online_image2.svg",
 		img_alt: "user1",
 		online: true,
 	},
 	{
-		id: 3,
+		id: 333,
 		name: "user3",
 		img: "/assets/image/online_image5.svg",
 		img_alt: "user3",
@@ -43,7 +43,7 @@ export const MASSAGES_ONLINE = [
 	},
 
 	{
-		id: 4,
+		id: 433,
 		name: "user4",
 		img: "/assets/image/online_image4.svg",
 		img_alt: "user4",
@@ -51,13 +51,15 @@ export const MASSAGES_ONLINE = [
 	},
 
 	{
-		id:14,
+		id:2223,
 		name: "user1",
 		img: "/assets/image/online_image1.svg",
 		img_alt: "user1",
 		online: false,
 	},
 	{
+		id:2223,
+
 		name: "user5",
 		img: "/assets/image/online_image4.svg",
 		img_alt: "user5",
@@ -124,7 +126,7 @@ export const MASSAGES_ONLINE = [
 		read: false,
 	},
 	{
-		id: 14,
+		id: 141,
 		name: "John Smith",
 		img: "/assets/image/message_img3.svg",
 		img_alt: "John Smith",
@@ -133,7 +135,7 @@ export const MASSAGES_ONLINE = [
 		read: true,
 	},
 	{
-		id: 15,
+		id: 112,
 		name: "John Snow",
 		img: "/assets/image/message_img4.svg",
 		img_alt: "John Snow",
@@ -142,7 +144,7 @@ export const MASSAGES_ONLINE = [
 		read: true,
 	},
 	{
-		id: 15,
+		id: 151,
 		name: "Sara Williams",
 		img: "/assets/image/message_img5.svg",
 		img_alt: "Sara Williams",
@@ -151,7 +153,7 @@ export const MASSAGES_ONLINE = [
 		read: true,
 	},
 	{
-		id: 17,
+		id: 171,
 		name: "John Smith",
 		img: "/assets/image/message_img6.svg",
 		img_alt: "John Smith",
@@ -160,7 +162,7 @@ export const MASSAGES_ONLINE = [
 		read: true,
 	},
 	{
-		id: 18,
+		id: 181,
 		name: "John Snow",
 		img: "/assets/image/message_img7.svg",
 		img_alt: "John Snow",
@@ -168,7 +170,7 @@ export const MASSAGES_ONLINE = [
 		online: false,
 		read: true,
 	},
-	{	id: 18,
+	{	id: 182,
 		name: "John Snow",
 		img: "/assets/image/message_img7.svg",
 		img_alt: "John Snow",
@@ -176,7 +178,7 @@ export const MASSAGES_ONLINE = [
 		online: false,
 		read: true,
 	},
-	{	id: 18,
+	{	id: 234,
 		name: "John Snow",
 		img: "/assets/image/message_img7.svg",
 		img_alt: "John Snow",
@@ -184,7 +186,7 @@ export const MASSAGES_ONLINE = [
 		online: false,
 		read: true,
 	},
-	{	id: 18,
+	{	id: 22,
 		name: "John Snow",
 		img: "/assets/image/message_img7.svg",
 		img_alt: "John Snow",
@@ -193,6 +195,7 @@ export const MASSAGES_ONLINE = [
 		read: true,
 	},
 	{
+		id: 21,
 		name: "John Snow",
 		img: "/assets/image/message_img7.svg",
 		img_alt: "John Snow",

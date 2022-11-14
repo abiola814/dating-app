@@ -7,6 +7,7 @@ import {
 	IonTabButton,
 	IonSpinner,
 	IonIcon,
+	IonLoading,
 } from "@ionic/react";
 
 import React from "react";
@@ -48,10 +49,10 @@ const Dashboard: React.FC = () => {
 	// }
 	return (
 		<IonApp>
-		
+		<React.StrictMode>
 		<IonTabs>
 			<IonRouterOutlet>
-			<Suspense fallback={<IonSpinner/>}>
+			<Suspense fallback={	<IonLoading message="processing data from server" duration={2000} isOpen={true}/>}>
 				<Route path="/dashboard/tab1" component={Liked} />
 				<Route path="/dashboard/tab2" component={MakeFriend} />
 				<Route path="/dashboard/tab3" component={Profile} />
@@ -83,7 +84,7 @@ const Dashboard: React.FC = () => {
 			</IonTabBar>
 			
 		</IonTabs>
-	
+		</React.StrictMode>
 		</IonApp>
 	);
 };

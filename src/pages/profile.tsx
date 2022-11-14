@@ -10,8 +10,7 @@ import {
   IonModal,
   IonContent,
   IonPage,
-  IonList,
-  IonImg
+  IonList
 } from '@ionic/react';
 
 
@@ -40,7 +39,7 @@ const Profile: React.FC = () => {
             </div>
             <div className="profile-photo">
               <div className="image-photo">
-                <IonImg src="assets/image/Avatar.png" alt="" />
+                <img src="assets/image/Avatar.png" alt="" />
                 <span><h3 className="combo">75% Completed</h3></span>
               </div>
               <div className="profile-name">
