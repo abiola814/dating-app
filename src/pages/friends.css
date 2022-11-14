@@ -1,6 +1,5 @@
 .aboutbody {
     font-family: Hellix, sans-serif;
-    max-width: 375px;
     display: flex;
     flex-direction: column;
 }
