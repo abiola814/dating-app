@@ -1,8 +1,7 @@
-import { IonContent, IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton, useIonRouter } from '@ionic/react';
+import { IonContent, IonPage, useIonRouter,IonImg } from '@ionic/react';
 import Select from "./Select";
 import { SELCECTIONS as questions } from "../constant";
 import "./question.css";
-import { useHistory } from 'react-router';
 
 const Question: React.FC = () => {
 	const navigation = useIonRouter();
@@ -16,7 +15,7 @@ const Question: React.FC = () => {
          <IonContent>
          <div className="questioncontainer">
 				<div className="img-wrapper">
-					<img
+					<IonImg
 						src="assets/image/frndr_logo2.png"
 						alt="frndr logo"
 						className="question-image-logo"

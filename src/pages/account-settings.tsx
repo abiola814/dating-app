@@ -1,8 +1,6 @@
-import { IonPage, IonContent,IonBackButton,IonRange,IonButton } from "@ionic/react";
-import { Link } from 'react-router-dom';
+import { IonPage, IonContent,IonBackButton,IonRange } from "@ionic/react";
+
 import './account-settings.css';
-import { useState } from "react";
-import { RangeValue } from '@ionic/core'
 
 const AccountSettings: React.FC = () => {
 

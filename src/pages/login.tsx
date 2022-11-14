@@ -1,7 +1,7 @@
-import { IonPage, IonContent, IonHeader,useIonToast, useIonRouter,IonButton,IonLoading, IonList, IonItem } from "@ionic/react";
+import { IonPage, IonContent,useIonToast, useIonRouter,IonButton,IonLoading,IonImg} from "@ionic/react";
 import { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { Form, Alert, } from "react-bootstrap";
+import { Link} from "react-router-dom";
+
 import { loginUser } from "../firebaseconfigs";
 import './login.css';
 import { useDispatch } from "react-redux";
@@ -14,7 +14,7 @@ const Login: React.FC = () => {
 
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
-        const [error, setError] = useState("");
+     
         const [present] = useIonToast();
         const dispatch = useDispatch()
         const navigation =useIonRouter()
@@ -38,7 +38,7 @@ const Login: React.FC = () => {
 
           })
           .catch((error) => {
-            const errorCode = error.code;
+       
             const errorMessage = error.message;
             console.log(errorMessage)
             present({
@@ -68,7 +68,7 @@ const Login: React.FC = () => {
         <IonContent scroll-y="false">
          <div className="log-main">
             <div className='image'>
-                <img src="assets/image/back.png" alt="main-logo" className='log-img'/>
+                <IonImg src="assets/image/back.png" alt="main-logo" className='log-img'/>
             </div>
             <div className='letter'>
                 <h2 className="log-h2">Login to your account</h2>

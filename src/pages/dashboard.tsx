@@ -1,26 +1,19 @@
 import {
-	IonContent,
+
 	IonTabBar,
-	IonHeader,
-	IonPage,
-	IonTitle,
-	IonToolbar,
-	IonButton,
 	IonApp,
-	useIonLoading,
 	IonTabs,
 	IonRouterOutlet,
 	IonTabButton,
 	IonSpinner,
 	IonIcon,
 } from "@ionic/react";
-import { State } from "ionicons/dist/types/stencil-public-runtime";
-import { useSelector } from "react-redux";
+
 import React from "react";
-import { Logout } from "../firebaseconfigs";
-import { Redirect, useHistory } from "react-router";
+
+import { Redirect } from "react-router";
 import { Route } from "react-router-dom";
-import SearchFriends from "./search-friends";
+
 
 import "./dashboard.css";
 
@@ -28,18 +21,15 @@ import "./dashboard.css";
 import {
 	heart,
 	person,
-	chatbubbleEllipses,
-	settings,
 	star,
 	pricetag,
 	chatbubbles,
 } from "ionicons/icons";
-import { MASSAGES_ONLINE } from "../constant";
+
 
 import { lazy, Suspense } from "react";
 
 const Liked = lazy(() => import("./liked"));
-const Chat = lazy(() => import("./Chat"));
 const Profile = lazy(() => import("./profile"));
 const Message = lazy(() => import("./Message"));
 const MakeFriend = lazy(() => import("./make-friends"));

@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonButton } from '@ionic/react';
+import { IonContent, IonPage,IonButton,IonImg } from '@ionic/react';
 import './Home.css';
 
 
@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <IonContent scroll-Y='false'>
         <div className='main'>
           <div className='image'>
-            <img src="assets/image/back.png" alt="main-logo" />
+            <IonImg src="assets/image/back.png" alt="main-logo" />
           </div>
           <div className='letters'>
             <h3 className='home-h3'>Welcome to FRNDR</h3>

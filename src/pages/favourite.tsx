@@ -1,7 +1,7 @@
-import { IonContent, IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton, useIonRouter } from '@ionic/react';
+import { IonContent, IonPage, useIonRouter,IonImg } from '@ionic/react';
 import './favourite.css';
 import { INTERESTS } from "../constant";
-import { useHistory } from 'react-router';
+
 
 const Favourite: React.FC = () => {
   const navigation = useIonRouter();
@@ -14,7 +14,7 @@ const Favourite: React.FC = () => {
       <IonContent>
       <div className="interestcontainer">
 				<div className="img-wrapper">
-					<img
+					<IonImg
 						src="assets/image/frndr_logo2.png"
 						alt="frndr logo"
 						className="interest-image-logo"

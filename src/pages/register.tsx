@@ -1,14 +1,12 @@
-import { IonPage, IonContent,useIonToast, IonHeader,IonInput, IonButton, IonItem, IonList, IonLoading, useIonRouter } from "@ionic/react";
-import Input, {parsePhoneNumber} from "react-phone-number-input";
+import { IonPage, IonContent,useIonToast, IonButton, IonList, IonLoading, useIonRouter,IonImg } from "@ionic/react";
 import './register.css';
 import './demo.css';
 import './intlTelInput.css';
-import { Link ,useHistory} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 // import PhoneInput from 'react-phone-input-2';
 import { createUser } from "../firebaseconfigs";
 import 'react-phone-number-input/style.css'
-import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 
 
 const Register: React.FC = () => {
@@ -58,7 +56,7 @@ const Register: React.FC = () => {
             <div className="reg-main">
          <IonList>
             <div className='image'>
-                <img src="assets/image/back.png" alt="main-logo" className='reg-img'/>
+                <IonImg src="assets/image/back.png" alt="main-logo" className='reg-img'/>
             </div>
             <div className='letter-reg'>
                 <h2 className="reg-h2">Register to your account</h2>

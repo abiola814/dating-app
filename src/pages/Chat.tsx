@@ -1,22 +1,15 @@
 import {
 	IonPage,
 	IonContent,
-	useIonToast,
 	IonHeader,
-	IonToolbar,
-	IonInput,
-	IonButton,
-	IonModal,
-	IonItem,
+		IonModal,
 	IonList,
-	IonLoading,
-	IonLabel,
-	IonAvatar,
+
 	IonImg
 } from "@ionic/react";
 import "./chat.css";
 import { Link, useParams } from "react-router-dom";
-import React, { useRef, useState } from 'react';
+import React, { useRef} from 'react';
 
 
 const Chat: React.FC<{ message_data: any[] }> = ({ message_data }) => {
@@ -37,11 +30,11 @@ const Chat: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 				<div className="messagebox header">
 					<div className="header-wrapper">
 						<Link to="/dashboard/tab4">
-							<img src="/assets/icon/back_arrow.svg" alt="back_arrow" />
+							<IonImg src="/assets/icon/back_arrow.svg" alt="back_arrow" />
 						</Link>
 						<div>
 							<div className="img-wrapper">
-								<img src={currentChat.img} alt={currentChat.img_alt} />
+								<IonImg src={currentChat.img} alt={currentChat.img_alt} />
 								{currentChat.online && <div className="online-sign"></div>}
 							</div>
 						</div>
@@ -101,7 +94,7 @@ const Chat: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 								<input type="text" placeholder="message" />
 							</div>
 							<div>
-								<img src="/assets/icon/send_btn.svg" alt="send button" />
+								<IonImg src="/assets/icon/send_btn.svg" alt="send button" />
 							</div>
 						</div>
 						<div className="close-tap"></div>
@@ -113,19 +106,19 @@ const Chat: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 			<IonContent className="ion-padding">
             <IonList>
 			<div className="flex-container">
-				<img className='mark' src="assets/image/icons/Vector.png"/>
+				<IonImg className='mark' src="assets/image/icons/Vector.png"/>
 				<h2>image</h2>
 			</div>
 			<div className="flex-container">
-				<img className='mediamodel' src="assets/image/icons/media.svg"/>
+				<IonImg className='mediamodel' src="assets/image/icons/media.svg"/>
 				<h2>video</h2>
 			</div>
 			<div className="flex-container">
-				<img className='musicmodel' src="assets/image/icons/music.svg"/>
+				<IonImg className='musicmodel' src="assets/image/icons/music.svg"/>
 				<h2>music</h2>
 			</div>
 			<div className="flex-container">
-				<img className='documentmodel' src="assets/image/icons/document.svg"/>
+				<IonImg className='documentmodel' src="assets/image/icons/document.svg"/>
 				<h2>document</h2>
 			</div>
             </IonList>
