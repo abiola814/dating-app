@@ -45,7 +45,19 @@
     height: 1.5rem;
     border-radius: 0 0 20px 20px;
     background-color: var(--match-percentage);
-    left: 50%;
+    left: 35%;
+    translate: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-match-liked{
+    position: absolute;
+    width: 5.375rem;
+    height: 1.5rem;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--match-percentage);
+    left: 21.7%;
     translate: -50%;
     display: flex;
     justify-content: center;

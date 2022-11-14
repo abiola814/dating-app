@@ -1,9 +1,8 @@
-import { IonContent,IonSlide, IonSlides,IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
+import { IonContent,IonPage, useIonRouter ,IonImg} from '@ionic/react';
 import "./friends.css"
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import {  Pagination } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useHistory } from 'react-router';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,9 +10,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Friends: React.FC = () => {
-    let history = useHistory();
+    const navigation = useIonRouter();
     function cancel(){
-        history.push('/dashboard/tab2')  
+        navigation.push('/dashboard/tab2','root',"replace") 
+
     }
     return (
         <IonPage className='aboutbody'>
@@ -35,13 +35,13 @@ const Friends: React.FC = () => {
                 className="swipercolor"
                 >
             <SwiperSlide>
-            <img src="assets/image/SaraProfile.png" className="top-main-image"/>
+            <IonImg src="assets/image/SaraProfile.png" className="top-main-image"/>
             </SwiperSlide>
             <SwiperSlide>
-            <img src="assets/image/SaraProfile.png" className="top-main-image"/>
+            <IonImg src="assets/image/SaraProfile.png" className="top-main-image"/>
             </SwiperSlide>
             <SwiperSlide>
-            <img src="assets/image/SaraProfile.png" className="top-main-image"/>
+            <IonImg src="assets/image/SaraProfile.png" className="top-main-image"/>
             </SwiperSlide>
             </Swiper>
         <div className="chat-icon">

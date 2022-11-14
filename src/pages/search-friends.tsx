@@ -1,10 +1,7 @@
 import {
 	IonContent,
-	IonHeader,
 	IonPage,
-	IonTitle,
-	IonToolbar,
-	IonButton,
+	IonImg
 } from "@ionic/react";
 import "./make-friends.css";
 
@@ -23,7 +20,7 @@ const SearchFriends: React.FC = () => {
 					<div className="status">
 						<div className="all">
 							<div className="my-status">
-								<img
+								<IonImg
 									src="assets/image/Avatar.png"
 									className="my-stat others"
 									alt=""
@@ -33,19 +30,19 @@ const SearchFriends: React.FC = () => {
 							</div>
 						</div>
 						<div className="others">
-							<img src="assets/image/third.png" alt="" />
+							<IonImg src="assets/image/third.png" alt="" />
 							<span className="names">Selena</span>
 						</div>
 						<div className="others">
-							<img src="assets/image/fourth.png" alt="" />
+							<IonImg src="assets/image/fourth.png" alt="" />
 							<span className="names">Clara</span>
 						</div>
 						<div className="others">
-							<img src="assets/image/fifth.png" alt="" />
+							<IonImg src="assets/image/fifth.png" alt="" />
 							<span className="names">Fabian</span>
 						</div>
 						<div className="">
-							<img src="assets/image/sixth.png" alt="" />
+							<IonImg src="assets/image/sixth.png" alt="" />
 							<span className="names">George</span>
 						</div>
 					</div>
@@ -62,7 +59,7 @@ const SearchFriends: React.FC = () => {
 							<div className="details">
 								<div className="head-up">70% Match</div>
 								<div className="swipe">
-									<img
+									<IonImg
 										src="assets/image/Rectangle.png"
 										alt=""
 										className="imm"
@@ -92,13 +89,13 @@ const SearchFriends: React.FC = () => {
 								</div>
 							</div>
 							<div className="picture-detail stack1">
-								<img src="assets/image/Rectangle.png" alt="" />
+								<IonImg src="assets/image/Rectangle.png" alt="" />
 							</div>
 							<div className="picture-detail stack2">
-								<img src="assets/image/Rectangle.png" alt="" />
+								<IonImg src="assets/image/Rectangle.png" alt="" />
 							</div>
 							<div className="picture-detail stack3">
-								<img src="assets/image/Rectangle.png" alt="" />
+								<IonImg src="assets/image/Rectangle.png" alt="" />
 							</div>
 						</div>
 					</div>

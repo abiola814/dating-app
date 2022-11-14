@@ -1,8 +1,6 @@
 
 
-import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
-import TinderCard from 'react-tinder-card'
 import './profile.css';
 import React, { useRef } from 'react';
 import { ProfileInterest } from "../constant";
@@ -10,17 +8,12 @@ import { ProfileInterest } from "../constant";
 import {
   IonButton,
   IonModal,
-  IonHeader,
   IonContent,
-  IonToolbar,
-  IonTitle,
   IonPage,
   IonList,
-  IonItem,
-  IonLabel,
-  IonIcon,
+  IonImg
 } from '@ionic/react';
-import { personCircle } from 'ionicons/icons';
+
 
 import './main.css';
 
@@ -47,13 +40,13 @@ const Profile: React.FC = () => {
             </div>
             <div className="profile-photo">
               <div className="image-photo">
-                <img src="assets/image/Avatar.png" alt="" />
+                <IonImg src="assets/image/Avatar.png" alt="" className="ion-profile-img"/>
                 <span><h3 className="combo">75% Completed</h3></span>
               </div>
               <div className="profile-name">
                 <div className="profile-user">
                   <h2>John Doe</h2>
-                  <Link to="/profilesetting"><i className="fa-solid fa-pen"></i></Link>
+                  <Link to="/profilesetting"><i className="fa-solid fa-pen edit-prof"></i></Link>
                 </div>
                   <span className="at-email">@johndoe</span>
               </div>

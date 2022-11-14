@@ -1,19 +1,11 @@
 import {
 	IonPage,
 	IonContent,
-	useIonToast,
 	IonHeader,
-	IonToolbar,
-	IonInput,
-	IonButton,
-	IonItem,
-	IonList,
-	IonLoading,
+	IonImg
 } from "@ionic/react";
 import "./message.css";
-import { Link, useHistory } from "react-router-dom";
-import { useState } from "react";
-import { createUser } from "../firebaseconfigs";
+import { Link} from "react-router-dom";
 import { MASSAGES_ONLINE as message_data } from "../constant";
 
 const Message: React.FC = () => {
@@ -29,7 +21,7 @@ const Message: React.FC = () => {
 									!info.messages &&
 									info.online && (
 										<div className="img-wrapper" key={i}>
-											<img src={info.img} alt={info.img_alt} />
+											<IonImg src={info.img} alt={info.img_alt} />
 											<div className="online-sign"></div>
 										</div>
 									)
@@ -49,7 +41,7 @@ const Message: React.FC = () => {
 									<Link to={`/chat/${info.id}`} className="messages-wrapper" key={i}>
 										<div className="inner-wrapper">
 											<div className="img-wrapper">
-												<img src={info.img} alt={info.img_alt} />
+												<IonImg src={info.img} alt={info.img_alt} />
 												{info.online && <div className="online-sign"></div>}
 											</div>
 											<div className="messages">

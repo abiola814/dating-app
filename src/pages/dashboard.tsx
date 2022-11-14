@@ -1,44 +1,43 @@
 import {
-	IonContent,
+
 	IonTabBar,
-	IonHeader,
-	IonPage,
-	IonTitle,
-	IonToolbar,
-	IonButton,
+	IonApp,
 	IonTabs,
 	IonRouterOutlet,
 	IonTabButton,
+	IonSpinner,
 	IonIcon,
 } from "@ionic/react";
-import { State } from "ionicons/dist/types/stencil-public-runtime";
-import { useSelector } from "react-redux";
+
 import React from "react";
-import { Logout } from "../firebaseconfigs";
-import { Redirect, useHistory } from "react-router";
+
+import { Redirect } from "react-router";
 import { Route } from "react-router-dom";
-import SearchFriends from "./search-friends";
-import MakeFriend from "./make-friends";
-import Message from "./Message";
-import Favour from "./dashboadfavourite";
+
+
 import "./dashboard.css";
 
 
 import {
 	heart,
 	person,
-	chatbubbleEllipses,
-	settings,
 	star,
 	pricetag,
 	chatbubbles,
 } from "ionicons/icons";
-import Profile from "./profile";
-import { MASSAGES_ONLINE } from "../constant";
-import Chat from "./Chat";
-import Liked from "./liked";
 
+
+import { lazy, Suspense } from "react";
+
+const Liked = lazy(() => import("./liked"));
+const Profile = lazy(() => import("./profile"));
+const Message = lazy(() => import("./Message"));
+const MakeFriend = lazy(() => import("./make-friends"));
+const Favour = lazy(() => import("./dashboadfavourite"));
 const Dashboard: React.FC = () => {
+
+		
+	  
 	// const email = useSelector((state: any) => state.user.email)
 	// let history = useHistory();
 
@@ -48,16 +47,20 @@ const Dashboard: React.FC = () => {
 	//   history.push('/')
 	// }
 	return (
+		<IonApp>
+		
 		<IonTabs>
 			<IonRouterOutlet>
+			<Suspense fallback={<IonSpinner/>}>
 				<Route path="/dashboard/tab1" component={Liked} />
 				<Route path="/dashboard/tab2" component={MakeFriend} />
 				<Route path="/dashboard/tab3" component={Profile} />
 				<Route exact path="/dashboard/tab4" component={Message} />
 				<Route path="/dashboard/tab5" component={Favour} />  
 				<Route exact path="/dashboard">
-					<Redirect to="/dashboard/tab2" />
+					<Redirect to="/dashboard/tab5" />
 				</Route>
+				</Suspense>
 			</IonRouterOutlet>
 
 			<IonTabBar className="IonTabButton" slot="bottom">
@@ -80,7 +83,8 @@ const Dashboard: React.FC = () => {
 			</IonTabBar>
 			
 		</IonTabs>
-		
+	
+		</IonApp>
 	);
 };
 export default Dashboard;
