@@ -1,9 +1,7 @@
-import { IonPage, IonContent, IonHeader, IonButton } from "@ionic/react";
-import { CSSProperties } from "react";
-import TinderCard from 'react-tinder-card'
+import { IonPage, IonContent, IonHeader, useIonRouter,IonImg } from "@ionic/react";
 import './make-friends.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useHistory } from "react-router";
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,16 +9,17 @@ import 'swiper/css/scrollbar';
 
 
 const MakeFriend: React.FC = () => {
-    let history = useHistory();
+    const navigation = useIonRouter();
 function about(){
-    history.push('/friends')  
+    navigation.push('/friends','root',"replace") 
+
 }
     return (
       <IonPage  className="makebody">
 
         <IonHeader>
         <div className="navline">
-        <img src="assets/image/icons/logo.png" alt=""/>
+        <IonImg src="assets/image/icons/logo.png" alt=""/>
         <i className="fa-regular fa-bell"></i>
     </div>
         </IonHeader>
@@ -35,37 +34,37 @@ function about(){
     >
          <SwiperSlide>
         <div className="avatar-profile">
-            <img src="assets/image/avatar/AvatarMystory.png" alt=""/>
-            <img src="assets/image/avatar/AddStory.png" className="plus-sign" alt=""/>
+            <IonImg src="assets/image/avatar/AvatarMystory.png" alt=""/>
+            <IonImg src="assets/image/avatar/AddStory.png" className="plus-sign" alt=""/>
         </div>
         </SwiperSlide>
         <SwiperSlide>
         <div className="avatar-profile">
-            <img src="assets/image/avatar/profileselena.png" alt=""/>
+            <IonImg src="assets/image/avatar/profileselena.png" alt=""/>
             <p className="avatar-name">Selena</p>
         </div>
         </SwiperSlide>
         <SwiperSlide>
         <div className="avatar-profile">
-            <img src="assets/image/avatar/profileClara.png" alt=""/>
+            <IonImg src="assets/image/avatar/profileClara.png" alt=""/>
             <p className="avatar-name">Clara</p>
         </div>
         </SwiperSlide>
         <SwiperSlide>
         <div className="avatar-profile">
-            <img src="assets/image/avatar/profileselena.png" alt=""/>
+            <IonImg src="assets/image/avatar/profileselena.png" alt=""/>
             <p className="avatar-name">Selena</p>
         </div>
         </SwiperSlide>
         <SwiperSlide>
                 <div className="avatar-profile">
-            <img src="assets/image/avatar/profileselena.png" alt=""/>
+            <IonImg src="assets/image/avatar/profileselena.png" alt=""/>
             <p className="avatar-name">Selena</p>
         </div>
         </SwiperSlide>
         <SwiperSlide>
         <div className="avatar-profile">
-            <img src="assets/image/avatar/profilefabian.png" alt=""/>
+            <IonImg src="assets/image/avatar/profilefabian.png" alt=""/>
             <p className="avatar-name">Fabian</p>
         </div>
         </SwiperSlide>
@@ -89,10 +88,10 @@ function about(){
         <div className="percentage-match">
             <p>70% Match</p>
         </div>
-        <img src="assets/image/SaraHome.png" alt="" className="main-picture" onClick={about}/>
-        <img src="assets/image/saraJohns.png" alt="" className="one"/>
-        <img src="assets/image/AmendaGrace.png" alt="" className="two"/>
-        <img src="assets/image/JaneSmith.png" alt="" className="three"/>
+        <IonImg src="assets/image/SaraHome.png" alt="" className="main-picture" onClick={about}/>
+        <IonImg src="assets/image/saraJohns.png" alt="" className="one"/>
+        <IonImg src="assets/image/AmendaGrace.png" alt="" className="two"/>
+        <IonImg src="assets/image/JaneSmith.png" alt="" className="three"/>
 
         <div className="profile-text">
             <h4 className="name-title">Sara Johns</h4>

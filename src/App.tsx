@@ -1,13 +1,11 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, IonSpinner, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Login from './pages/login';
 import Register from './pages/register';
 import Verify from './pages/verify';
-import MakeFriend from './pages/make-friends';
-import SearchFriends from './pages/search-friends';
-import Profile from './pages/profile';
+import Chat from './pages/Chat';
 import AccountSettings from './pages/account-settings';
 
 /* Core CSS required for Ionic components to work properly */
@@ -34,12 +32,11 @@ import Dashboard from './pages/dashboard';
 import { setUserState } from './redux/actions';
 import { useDispatch } from 'react-redux';
 import Favourite from './pages/favourite';
-import Friends from './pages/friends';
-import ProfileSetting from './pages/profilesetting';
-import Chat from './pages/Chat';
 import { MASSAGES_ONLINE } from "./constant";
 import Question from './pages/question';
-
+import { lazy, Suspense } from 'react';
+const Friends = lazy(() => import("./pages/friends"));
+const ProfileSetting = lazy(() => import("./pages/profilesetting"));
 
 setupIonicReact();
 
@@ -48,20 +45,19 @@ const Datingrouter: React.FC = () => {
     <IonReactRouter>
 
       <IonRouterOutlet>
+      <Suspense fallback={<IonSpinner/>}>
         <Route exact path="/" component={ Home }/>
         <Route exact path="/login" component={ Login } />
         <Route exact path="/register" component={ Register } />
         <Route  path="/dashboard" component={ Dashboard } />
         <Route exact path="/verify" component={ Verify } />
-        <Route exact path="/make-friends" component={ MakeFriend } />
-        <Route exact path="/search-friends" component={ SearchFriends } />
-        <Route exact path="/profile" component={ Profile } />
         <Route exact path="/favourite" component={ Favourite } />
         <Route exact path="/friends" component={ Friends } />
         <Route exact path="/profilesetting" component={ ProfileSetting } />
         <Route  path="/chat/:id" component={ () => <Chat message_data={MASSAGES_ONLINE}/>} />
         <Route exact path="/account-settings" component={ AccountSettings } />
         <Route exact path="/question" component={ Question } />
+      </Suspense>
   </IonRouterOutlet>
 </IonReactRouter>
   )

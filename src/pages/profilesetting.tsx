@@ -1,4 +1,4 @@
-import { IonContent,IonBackButton,IonSlide, IonSlides,IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
+import { IonContent,IonBackButton,IonHeader, IonPage,IonImg } from '@ionic/react';
 
 import './profilesetting.css'
 const ProfileSetting: React.FC = () => {
@@ -22,7 +22,7 @@ const ProfileSetting: React.FC = () => {
                     <p>1</p>
                 </div>
     
-                <img src="assets/image/pf1.png" alt=""/>
+                <IonImg src="assets/image/pf1.png" alt=""/>
             </div>
     
             <div className="pic2">
@@ -33,7 +33,7 @@ const ProfileSetting: React.FC = () => {
                 <div className="circle">
                     <p>2</p>
                 </div>
-                <img src="assets/image/pf2.png" alt=""/>
+                <IonImg src="assets/image/pf2.png" alt=""/>
             </div>
             <div className="pic3">
                 <div className="cancel">
@@ -43,7 +43,7 @@ const ProfileSetting: React.FC = () => {
                 <div className="circle">
                     <p>3</p>
                 </div>
-                <img src="assets/image/pf3.png" alt=""/>
+                <IonImg src="assets/image/pf3.png" alt=""/>
             </div>
             <div className="pic4">
                 <div className="cancel">
@@ -53,7 +53,7 @@ const ProfileSetting: React.FC = () => {
                 <div className="circle">
                     <p>4</p>
                 </div>
-                <img src="assets/image/pf4.png" alt=""/>
+                <IonImg src="assets/image/pf4.png" alt=""/>
             </div>
             <div className="pic5">
                 <div className="cancel">
@@ -63,7 +63,7 @@ const ProfileSetting: React.FC = () => {
                 <div className="circle">
                     <p>5</p>
                 </div>
-                <img src="assets/image/pf5.png" alt=""/>
+                <IonImg src="assets/image/pf5.png" alt=""/>
             </div>
             <div className="pic6">
                 <div className="cancel">
@@ -73,7 +73,7 @@ const ProfileSetting: React.FC = () => {
                 <div className="circle">
                     <p>6</p>
                 </div>
-                <img src="assets/image/pf6.png" alt=""/>
+                <IonImg src="assets/image/pf6.png" alt=""/>
             </div>
         </div>
     
@@ -92,11 +92,11 @@ const ProfileSetting: React.FC = () => {
                 </select>
                 <textarea name="" id=""  placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit."></textarea>
                 <div className="social-url">
-                    <img src="assets/image/icons/fb.png" className="social"/>
+                    <IonImg src="assets/image/icons/fb.png" className="social"/>
                     <input type="text" placeholder="URL here"/>
                 </div>
                 <div className="social-url">
-                    <img src="assets/image/icons/ig.png" className="social"/>
+                    <IonImg src="assets/image/icons/ig.png" className="social"/>
                     <input type="text" placeholder="URL here"/>
                 </div>
             </form>

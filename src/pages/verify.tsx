@@ -1,26 +1,24 @@
-import { IonPage, IonContent,IonInput, IonHeader,IonBackButton, IonButton } from "@ionic/react";
-import { NONAME } from "dns";
+import { IonPage, IonContent,IonInput,IonBackButton,useIonRouter,IonImg } from "@ionic/react";
 import './verify.css';
-import { Link ,useHistory} from "react-router-dom";
-import OtpInput from "../components/OtpInput";
+
 import { useState } from "react";
 import { MuiOtpInput } from 'mui-one-time-password-input'
-import { NumericKeyboard } from 'react-numeric-keyboard';
+
 
 
 const Verify: React.FC = () => {
   const [otp, setOtp] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
 
-  let history = useHistory();
+
+  const navigation = useIonRouter();
   
   const handleChange = (newValue :any) => {
     setOtp(newValue)
     
   }
   const handleComplete = (finalValue: any) => {
-    history.push('/favourite')
-  }
+    navigation.push('/favourite','root',"replace") 
+   }
     return (
       <IonPage>
         <IonContent scroll-y="false">
@@ -28,7 +26,7 @@ const Verify: React.FC = () => {
           <div className="upper">
             <div className="mess">
                 <IonBackButton text="" className="fa-solid fa-angle-left" defaultHref="register" />
-                <img src="assets/image/back.png"  className="im-sent" alt="" />
+                <IonImg src="assets/image/back.png"  className="im-sent" alt="" />
             </div>
             <div className="verify-message">
               <h2>Verifiy Mobile Number</h2>
