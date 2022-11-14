@@ -5,15 +5,14 @@ import { useState } from "react";
 import { RangeValue } from '@ionic/core'
 
 const AccountSettings: React.FC = () => {
-    const [lastEmittedValue, setLastEmittedValue] = useState<RangeValue>();
-    const [lastEmittedValues, setLastEmittedValues] = useState<RangeValue>();
+
     return (
         <IonPage>
             <IonContent>
                 <div className="main-account">
                     <div className="account-head">
                         <div className="account-set">
-                            <IonBackButton text="" defaultHref="profile" />
+                            <IonBackButton text="" defaultHref="/dashboard/tab3" />
                             <h2>Settings</h2>
                         </div>
                         <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
@@ -26,7 +25,7 @@ const AccountSettings: React.FC = () => {
                         </div>
                         <div className="phone-set">
                             <h3>Email</h3>
-                            <Link to="" className="settings-email"><p>johndoe@gmail.com</p></Link>
+                            <p className="settings-email">johndoe@gmail.com</p>
                         </div>
                     </div>
                     <div className="account-discovery">

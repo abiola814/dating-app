@@ -1,4 +1,4 @@
-import { IonContent,IonSlide, IonSlides,IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
+import { IonContent,IonSlide, IonSlides,IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton, useIonRouter } from '@ionic/react';
 import "./friends.css"
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
@@ -11,9 +11,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Friends: React.FC = () => {
-    let history = useHistory();
+    const navigation = useIonRouter();
     function cancel(){
-        history.push('/dashboard/tab2')  
+        navigation.push('/dashboard/tab2','root',"replace") 
+
     }
     return (
         <IonPage className='aboutbody'>

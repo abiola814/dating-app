@@ -1,4 +1,4 @@
-import { IonPage, IonContent,IonInput, IonHeader,IonBackButton, IonButton } from "@ionic/react";
+import { IonPage, IonContent,IonInput, IonHeader,IonBackButton, IonButton, useIonRouter } from "@ionic/react";
 import { NONAME } from "dns";
 import './verify.css';
 import { Link ,useHistory} from "react-router-dom";
@@ -12,15 +12,14 @@ const Verify: React.FC = () => {
   const [otp, setOtp] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
-  let history = useHistory();
+  const navigation = useIonRouter();
   
   const handleChange = (newValue :any) => {
     setOtp(newValue)
     
   }
   const handleComplete = (finalValue: any) => {
-    history.push('/favourite')
-  }
+    navigation.push('/favourite','root',"replace")  }
     return (
       <IonPage>
         <IonContent scroll-y="false">

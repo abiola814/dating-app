@@ -1,4 +1,4 @@
-import { IonPage, IonContent,useIonToast, IonHeader,IonInput, IonButton, IonItem, IonList, IonLoading } from "@ionic/react";
+import { IonPage, IonContent,useIonToast, IonHeader,IonInput, IonButton, IonItem, IonList, IonLoading, useIonRouter } from "@ionic/react";
 import Input, {parsePhoneNumber} from "react-phone-number-input";
 import './register.css';
 import './demo.css';
@@ -19,18 +19,18 @@ const Register: React.FC = () => {
     const [present] = useIonToast();
     const [phone, setPhone] = useState('');
 
-    let history = useHistory();
+    const navigation = useIonRouter();
     
     async function handleSubmit(){
         setBusy(true)
         console.log(email,number,password)
-        history.push('/verify')
+        navigation.push('/verify','root',"replace")
     await createUser(email,password)
     .then((userCredential) => {
     // Signed in 
     // const user = userCredential.user;
     // console.log(user)
-    history.push('/verify')    // ...
+    navigation.push('/verify','root',"replace")    // ...
   
   })
     .catch((error) => {

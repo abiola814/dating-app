@@ -1,13 +1,14 @@
-import { IonContent, IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton, useIonRouter } from '@ionic/react';
 import Select from "./Select";
 import { SELCECTIONS as questions } from "../constant";
 import "./question.css";
 import { useHistory } from 'react-router';
 
 const Question: React.FC = () => {
-	let history = useHistory();
+	const navigation = useIonRouter();
 	function submit(){
-		history.push('/dashboard')  
+	    navigation.push('/dashboard','root',"replace") 
+
 	}
     return (
         <IonPage>

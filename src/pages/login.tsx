@@ -1,4 +1,4 @@
-import { IonPage, IonContent, IonHeader,useIonToast, IonButton,IonLoading, IonList, IonItem } from "@ionic/react";
+import { IonPage, IonContent, IonHeader,useIonToast, useIonRouter,IonButton,IonLoading, IonList, IonItem } from "@ionic/react";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Alert, } from "react-bootstrap";
@@ -6,6 +6,7 @@ import { loginUser } from "../firebaseconfigs";
 import './login.css';
 import { useDispatch } from "react-redux";
 import { setUserState } from "../redux/actions";
+
 
 const Login: React.FC = () => {
 
@@ -16,7 +17,7 @@ const Login: React.FC = () => {
         const [error, setError] = useState("");
         const [present] = useIonToast();
         const dispatch = useDispatch()
-        let history = useHistory();
+        const navigation =useIonRouter()
 
 
       
@@ -33,7 +34,7 @@ const Login: React.FC = () => {
               position: 'middle'
             });
             dispatch(setUserState(user.user.email))
-            history.push('/dashboard') 
+              navigation.push('/dashboard','root',"replace") 
 
           })
           .catch((error) => {

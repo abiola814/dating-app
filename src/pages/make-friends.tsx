@@ -1,4 +1,4 @@
-import { IonPage, IonContent, IonHeader, IonButton } from "@ionic/react";
+import { IonPage, IonContent, IonHeader, IonButton, useIonRouter } from "@ionic/react";
 import { CSSProperties } from "react";
 import TinderCard from 'react-tinder-card'
 import './make-friends.css';
@@ -11,9 +11,10 @@ import 'swiper/css/scrollbar';
 
 
 const MakeFriend: React.FC = () => {
-    let history = useHistory();
+    const navigation = useIonRouter();
 function about(){
-    history.push('/friends')  
+    navigation.push('/friends','root',"replace") 
+
 }
     return (
       <IonPage  className="makebody">

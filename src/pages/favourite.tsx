@@ -1,12 +1,12 @@
-import { IonContent, IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage,IonImg,IonGrid,IonRow,IonCol,IonNote, IonTitle, IonToolbar,IonButton, useIonRouter } from '@ionic/react';
 import './favourite.css';
 import { INTERESTS } from "../constant";
 import { useHistory } from 'react-router';
 
 const Favourite: React.FC = () => {
-  let history = useHistory();
+  const navigation = useIonRouter();
   function submit(){
-      history.push('/question')  
+    navigation.push('/question','root',"replace") 
   }
   return (
     <IonPage>
