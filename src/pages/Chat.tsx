@@ -2,28 +2,26 @@ import {
 	IonPage,
 	IonContent,
 	IonHeader,
-		IonModal,
+	IonModal,
 	IonList,
-
-	IonImg
+	IonImg,
 } from "@ionic/react";
 import "./chat.css";
 import { Link, useParams } from "react-router-dom";
-import React, { useRef} from 'react';
-
+import React, { useRef } from "react";
 
 const Chat: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 	const modal = useRef<HTMLIonModalElement>(null);
 	type QuizParams = {
 		id: any;
-	  };
-	const {id} = useParams<QuizParams>();
+	};
+	const { id } = useParams<QuizParams>();
 
 	console.log(message_data);
 	const [currentChat] = message_data.filter(
 		(message: { id: number }) => message.id === Number(id)
 	);
-
+	console.log(currentChat);
 	return (
 		<IonPage>
 			<IonHeader>
@@ -86,9 +84,12 @@ const Chat: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 					<div className="messagebox footer">
 						<div className="wrapper">
 							<div>
-							<input id="open-modal" type="image"
-								src="/assets/icon/add_document.svg" alt="add icon"/>
-							
+								<input
+									id="open-modal"
+									type="image"
+									src="/assets/icon/add_document.svg"
+									alt="add icon"
+								/>
 							</div>
 							<div className="input-wrapper">
 								<input type="text" placeholder="message" />
@@ -100,30 +101,43 @@ const Chat: React.FC<{ message_data: any[] }> = ({ message_data }) => {
 						<div className="close-tap"></div>
 					</div>
 				</section>
-			
-				<IonModal ref={modal} trigger="open-modal" initialBreakpoint={0.3} breakpoints={[0, 0.3, 0.5, 0.5]}>
 
-			<IonContent className="ion-padding">
-            <IonList>
-			<div className="flex-container">
-				<IonImg className='mark' src="assets/image/icons/Vector.png"/>
-				<h2>image</h2>
-			</div>
-			<div className="flex-container">
-				<IonImg className='mediamodel' src="assets/image/icons/media.svg"/>
-				<h2>video</h2>
-			</div>
-			<div className="flex-container">
-				<IonImg className='musicmodel' src="assets/image/icons/music.svg"/>
-				<h2>music</h2>
-			</div>
-			<div className="flex-container">
-				<IonImg className='documentmodel' src="assets/image/icons/document.svg"/>
-				<h2>document</h2>
-			</div>
-            </IonList>
-          </IonContent>
-        </IonModal>
+				<IonModal
+					ref={modal}
+					trigger="open-modal"
+					initialBreakpoint={0.3}
+					breakpoints={[0, 0.3, 0.5, 0.5]}
+				>
+					<IonContent className="ion-padding">
+						<IonList>
+							<div className="flex-container">
+								<IonImg className="mark" src="assets/image/icons/Vector.png" />
+								<h2>image</h2>
+							</div>
+							<div className="flex-container">
+								<IonImg
+									className="mediamodel"
+									src="assets/image/icons/media.svg"
+								/>
+								<h2>video</h2>
+							</div>
+							<div className="flex-container">
+								<IonImg
+									className="musicmodel"
+									src="assets/image/icons/music.svg"
+								/>
+								<h2>music</h2>
+							</div>
+							<div className="flex-container">
+								<IonImg
+									className="documentmodel"
+									src="assets/image/icons/document.svg"
+								/>
+								<h2>document</h2>
+							</div>
+						</IonList>
+					</IonContent>
+				</IonModal>
 			</IonContent>
 		</IonPage>
 	);
