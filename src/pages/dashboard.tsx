@@ -52,13 +52,13 @@ const Dashboard: React.FC = () => {
 		<React.StrictMode>
 		<IonTabs>
 			<IonRouterOutlet>
-			<Suspense fallback={	<IonLoading message="processing data from server" duration={2000} isOpen={true}/>}>
-				<Route path="/dashboard/tab1" component={Liked} />
-				<Route path="/dashboard/tab2" component={MakeFriend} />
-				<Route path="/dashboard/tab3" component={Profile} />
-				<Route exact path="/dashboard/tab4" component={Message} />
+			<Suspense fallback={	<IonLoading message="processing data from server" duration={200} isOpen={true}/>}>
+				<Route  exact={true}  path="/dashboard/tab1" component={Liked} />
+				<Route  exact={true}  path="/dashboard/tab2" component={MakeFriend} />
+				<Route  exact={true}  path="/dashboard/tab3" component={Profile} />
+				<Route exact={true} path="/dashboard/tab4" component={Message} />
 				<Route path="/dashboard/tab5" component={Favour} />  
-				<Route exact path="/dashboard">
+				<Route exact={true} path="/dashboard">
 					<Redirect to="/dashboard/tab5" />
 				</Route>
 				</Suspense>

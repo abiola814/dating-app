@@ -10,23 +10,25 @@ import {
   IonModal,
   IonContent,
   IonPage,
-  IonList
+  IonList,IonImg
 } from '@ionic/react';
 
 
 import './main.css';
 
 import { useHistory } from "react-router-dom";
+import { Suspense } from "react";
+import { lazyWithPreload } from "react-lazy-with-preload";
+const OtherComponent = lazyWithPreload(() => import("./Message"));
+
 const Profile: React.FC = () => {
-    
+  OtherComponent.preload();
   const modal = useRef<HTMLIonModalElement>(null);
   let history = useHistory();
   function setting(){
       history.push('/account-settings')  
   }
-  function dismiss() {
-    modal.current?.dismiss();
-  }
+  
 
 
     return (
@@ -39,13 +41,14 @@ const Profile: React.FC = () => {
             </div>
             <div className="profile-photo">
               <div className="image-photo">
-                <img src="assets/image/Avatar.png" alt="" />
+
+                <IonImg src="assets/image/Avatar.png" alt="" className="ion-profile-img"/>
                 <span><h3 className="combo">75% Completed</h3></span>
               </div>
               <div className="profile-name">
                 <div className="profile-user">
                   <h2>John Doe</h2>
-                  <Link to="/profilesetting"><i className="fa-solid fa-pen"></i></Link>
+                  <Link to="/profilesetting"><i className="fa-solid fa-pen edit-prof"></i></Link>
                 </div>
                   <span className="at-email">@johndoe</span>
               </div>

@@ -14,7 +14,7 @@ const Liked: React.FC = () => {
          <div className="favorite-cards">
             <div className="row">
                 <div className="image1">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/saraJohns.png" alt=""/>
@@ -24,7 +24,7 @@ const Liked: React.FC = () => {
                     </div>
                 </div>
                 <div className="image2">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/AmendaGrace.png" alt=""/>
@@ -37,7 +37,7 @@ const Liked: React.FC = () => {
     
             <div className="row">
                 <div className="image3">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/LaraWilliams.png" alt=""/>
@@ -47,7 +47,7 @@ const Liked: React.FC = () => {
                     </div>
                 </div>
                 <div className="image4">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/JaneSmith.png" alt=""/>
@@ -60,14 +60,14 @@ const Liked: React.FC = () => {
     
             <div className="row">
                 <div className="image5">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/7.png" alt=""/>
                 </div>
     
                 <div className="image6">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/8.png" alt=""/>

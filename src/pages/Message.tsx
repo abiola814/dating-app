@@ -8,14 +8,20 @@ import "./message.css";
 import { Link} from "react-router-dom";
 import { MASSAGES_ONLINE as message_data } from "../constant";
 import React from "react";
-import { Suspense } from "react";
+
 
 const Message: React.FC = () => {
 	return (
 		<IonPage>
+
 	 <React.StrictMode>
+	 <IonLoading message="processing data from server" duration={1000} isOpen={true}/>
 			<IonHeader>
-				<h2 className="top-message">Messages</h2>
+			<div className="messageheader">
+            <h2>Messages</h2>
+            <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
+      		 </div>```
+		
 					<aside className="wrapper">
 						<h4 className="h4-margin content-wrapper">Online</h4>
 						<div className="online">

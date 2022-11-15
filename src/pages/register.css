@@ -14,7 +14,6 @@
 
 .image{
     text-align: center;
-    height: 150px;
 }
 
 .register-form{
@@ -28,8 +27,9 @@
     margin-left: 5%;
 }
 .reg-img{
-    margin-top: 5%;
-    margin-bottom: 3%;   
+    margin-top: 33px;
+    margin-bottom: 35px;   
+    height: 100px;
 }
 
 .reg-h2{
@@ -55,20 +55,16 @@
     color: #3B3237;
     margin: auto;
 }
-.input-check{
+.input-check {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
     justify-content: center;
-    margin-bottom: 3%;
-    margin-left: 3%;
-    /* height: 47px; */
+    margin-bottom: 10px;
+    margin-left: 15px;
     width: 100%;
     font-family: Segoe UI;
-    font-size: 16px;
-    /* font-weight: 700; */
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
+    line-height: 15px;
 }
 .terms{
     font-family: Segoe UI;

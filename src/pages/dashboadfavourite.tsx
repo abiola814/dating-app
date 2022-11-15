@@ -1,7 +1,10 @@
 import { IonContent, IonHeader, IonPage,IonImg } from '@ionic/react';
 import "./fav.css"
-
+import { Suspense } from "react";
+import { lazyWithPreload } from "react-lazy-with-preload";
+const OtherComponent = lazyWithPreload(() => import("./Message"));
 const Favour: React.FC = () => {
+    OtherComponent.preload();
     return (
         <IonPage className='dashboardfav'>
         <IonHeader>
@@ -14,7 +17,7 @@ const Favour: React.FC = () => {
          <div className="favorite-cards">
             <div className="row">
                 <div className="image1">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/saraJohns.png" alt=""/>
@@ -24,7 +27,7 @@ const Favour: React.FC = () => {
                     </div>
                 </div>
                 <div className="image2">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/AmendaGrace.png" alt=""/>
@@ -37,7 +40,7 @@ const Favour: React.FC = () => {
     
             <div className="row">
                 <div className="image3">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/LaraWilliams.png" alt=""/>
@@ -47,7 +50,7 @@ const Favour: React.FC = () => {
                     </div>
                 </div>
                 <div className="image4">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/JaneSmith.png" alt=""/>
@@ -60,14 +63,14 @@ const Favour: React.FC = () => {
     
             <div className="row">
                 <div className="image5">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <img src="assets/image/7.png" alt=""/>
                 </div>
     
                 <div className="image6">
-                    <div className="percentage-match">
+                    <div className="percentage-match-liked">
                         <h4 className="percentage-match-text">70% Match</h4>
                     </div>
                     <IonImg src="assets/image/8.png" alt=""/>

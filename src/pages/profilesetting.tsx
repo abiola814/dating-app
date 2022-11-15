@@ -7,7 +7,7 @@ const ProfileSetting: React.FC = () => {
             
         <IonHeader>
         <div className="profile-settings">
-        <IonBackButton text="" className="fa-solid fa-angle-left" defaultHref="/dashboard/tab3" />
+        <IonBackButton text="" defaultHref="/dashboard/tab3" />
             <h2 className='prosetpad'>Profile Settings</h2>
         </div>
          </IonHeader>

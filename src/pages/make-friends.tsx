@@ -6,10 +6,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-
+import { Suspense } from "react";
+import { lazyWithPreload } from "react-lazy-with-preload";
+const OtherComponent = lazyWithPreload(() => import("./Message"));
 
 const MakeFriend: React.FC = () => {
     const navigation = useIonRouter();
+    OtherComponent.preload();
 function about(){
     navigation.push('/friends','root',"replace") 
 
@@ -19,7 +22,7 @@ function about(){
 
         <IonHeader>
         <div className="navline">
-        <IonImg src="assets/image/icons/logo.png" alt=""/>
+        <IonImg src="assets/image/icons/logo.png" className="adjustimage" alt=""/>
         <i className="fa-regular fa-bell"></i>
     </div>
         </IonHeader>
@@ -88,10 +91,10 @@ function about(){
         <div className="percentage-match">
             <p>70% Match</p>
         </div>
-        <IonImg src="assets/image/SaraHome.png" alt="" className="main-picture" onClick={about}/>
-        <IonImg src="assets/image/saraJohns.png" alt="" className="one"/>
-        <IonImg src="assets/image/AmendaGrace.png" alt="" className="two"/>
-        <IonImg src="assets/image/JaneSmith.png" alt="" className="three"/>
+        <img src="assets/image/SaraHome.png" alt="" className="main-picture" onClick={about}/>
+        <img src="assets/image/saraJohns.png" alt="" className="one"/>
+        <img src="assets/image/AmendaGrace.png" alt="" className="two"/>
+        <img src="assets/image/JaneSmith.png" alt="" className="three"/>
 
         <div className="profile-text">
             <h4 className="name-title">Sara Johns</h4>
